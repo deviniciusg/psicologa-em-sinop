@@ -10,16 +10,22 @@
       --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
     
-    *{box-sizing:border-box}
-    html,body{height:100%;}
-    body{
-      margin:0;
-      font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
-      background:var(--bg);
-      color:var(--text);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.45;
+    * {
+      box-sizing: border-box;
+    }
+    
+    html, body {
+      height: 100%;
+    }
+    
+    body {
+      margin: 0;
+      font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+      background: #E0D7D2;
+      color: #1f2933;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      line-height: 1.45;
     }
 
     /* Animações globais */
@@ -75,54 +81,56 @@
     }
 
     /* Header melhorado */
-    header{
+    header {
+      position: fixed;
       top: 0;
       left: 0;
       right: 0;
-      max-width:var(--max);
-      margin:0 auto;
-      padding:20px 24px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
       background: rgba(224, 215, 210, 0.98);
+      -webkit-backdrop-filter: blur(10px);
       backdrop-filter: blur(10px);
       border-bottom: 2px solid rgba(114, 53, 58, 0.15);
       z-index: 100;
       animation: fadeInUp 0.8s ease-out;
     }
     
-    .brand{
-      color:var(--accent);
-      font-weight:700;
-      letter-spacing:0.4px;
+    .brand {
+      color: #72353A;
+      font-weight: 700;
+      letter-spacing: 0.4px;
       font-size: 18px;
-      transition: var(--transition);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
     
     .brand:hover {
-      color: var(--card);
+      color: #bd6c6d;
       transform: scale(1.02);
     }
     
-    nav{
-      display:flex;
-      gap:18px;
-      align-items:center;
+    nav {
+      display: flex;
+      gap: 18px;
+      align-items: center;
     }
     
-    nav a{
-      color:var(--muted);
-      text-decoration:none;
-      font-weight:500;
-      transition: var(--transition);
+    nav a {
+      color: #5b5857;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       position: relative;
       padding: 8px 0;
     }
     
     nav a:hover {
-      color: var(--accent);
+      color: #72353A;
       transform: translateY(-2px);
     }
     
@@ -133,64 +141,64 @@
       left: 0;
       width: 0;
       height: 2px;
-      background: var(--accent);
-      transition: var(--transition);
+      background: #72353A;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
     
     nav a:hover::after {
       width: 100%;
     }
 
-    .container{
-      max-width:var(--max);
-      margin:0 auto 80px;
-      padding:120px 24px 28px;
-      display:grid;
+    .container {
+      max-width: 1100px;
+      margin: 0 auto 80px;
+      padding: 120px 24px 28px;
+      display: grid;
       grid-template-columns: 1fr 460px;
-      gap:36px;
-      align-items:center;
+      gap: 36px;
+      align-items: center;
     }
 
     /* left column */
-    .hero-title{
-      font-size: clamp(28px, 5vw, 48px);
-      line-height:1.02;
-      margin:0 0 18px 0;
-      font-weight:700;
-      color:var(--accent);
+    .hero-title {
+      font-size: 48px;
+      line-height: 1.02;
+      margin: 0 0 18px 0;
+      font-weight: 700;
+      color: #72353A;
       animation: fadeInLeft 1s ease-out 0.2s both;
     }
     
-    .hero-sub{
-      margin:0 0 22px 0;
-      color:var(--muted);
-      max-width:54ch;
-      font-size:16px;
-      font-weight:400;
+    .hero-sub {
+      margin: 0 0 22px 0;
+      color: #5b5857;
+      max-width: 54ch;
+      font-size: 16px;
+      font-weight: 400;
       animation: fadeInLeft 1s ease-out 0.4s both;
     }
     
-    .cta-row{
-      display:flex;
-      gap:14px;
-      align-items:center;
+    .cta-row {
+      display: flex;
+      gap: 14px;
+      align-items: center;
       animation: fadeInLeft 1s ease-out 0.6s both;
     }
     
-    .btn-primary{
-      background:var(--accent);
-      color:white;
-      border:none;
-      padding:12px 18px;
-      font-weight:600;
-      border-radius:10px;
-      box-shadow:0 6px 18px rgba(31,90,68,0.12);
-      cursor:pointer;
-      text-decoration:none;
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      transition: var(--transition);
+    .btn-primary {
+      background: #72353A;
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      font-weight: 600;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(31, 90, 68, 0.12);
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       position: relative;
       overflow: hidden;
     }
@@ -202,7 +210,7 @@
       left: -100%;
       width: 100%;
       height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
       transition: left 0.5s;
     }
     
@@ -213,53 +221,53 @@
     .btn-primary:hover {
       transform: translateY(-3px);
       box-shadow: 0 10px 25px rgba(114, 53, 58, 0.3);
-      background: var(--card);
+      background: #bd6c6d;
     }
     
-    .btn-ghost{
-      background:transparent;
-      border:1px solid rgba(0,0,0,0.06);
-      padding:10px 14px;
-      border-radius:10px;
-      color:var(--muted);
-      transition: var(--transition);
+    .btn-ghost {
+      background: transparent;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      padding: 10px 14px;
+      border-radius: 10px;
+      color: #5b5857;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
     
     .btn-ghost:hover {
-      border-color: var(--accent);
-      color: var(--accent);
+      border-color: #72353A;
+      color: #72353A;
       transform: translateY(-2px);
       box-shadow: 0 4px 12px rgba(114, 53, 58, 0.1);
     }
 
-    .info-block{
-      margin-top:36px;
+    .info-block {
+      margin-top: 36px;
       animation: fadeInLeft 1s ease-out 0.8s both;
     }
     
-    .therapist-name{
-      font-size:22px;
-      margin:0 0 6px 0;
-      font-weight:700;
+    .therapist-name {
+      font-size: 22px;
+      margin: 0 0 6px 0;
+      font-weight: 700;
     }
     
-    .credentials{
-      color:var(--muted);
-      font-size:14px;
-      margin:0;
+    .credentials {
+      color: #5b5857;
+      font-size: 14px;
+      margin: 0;
     }
 
     /* photo card */
-    .photo-card{
-      background:var(--card);
-      border-radius:var(--radius);
-      padding:22px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+    .photo-card {
+      background: #bd6c6d;
+      border-radius: 14px;
+      padding: 22px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
       animation: fadeInRight 1s ease-out 0.3s both;
-      transition: var(--transition);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       cursor: pointer;
     }
     
@@ -268,12 +276,12 @@
       box-shadow: 0 20px 40px rgba(189, 108, 109, 0.3);
     }
     
-    .photo-card img{
-      max-width:100%;
-      height:auto;
-      border-radius:10px;
-      display:block;
-      transition: var(--transition);
+    .photo-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      display: block;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
     
     .photo-card:hover img {
@@ -281,42 +289,46 @@
     }
 
     /* floating WhatsApp */
-    .whatsapp{
-      position:fixed;
-      right:18px;
-      bottom:18px;
-      width:58px;
-      height:58px;
-      border-radius:999px;
-      background:linear-gradient(180deg,#1eb980,#158a5f);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      box-shadow:0 8px 30px rgba(22,120,84,0.18);
-      z-index:80;
-      text-decoration:none;
-      color:white;
-      font-weight:700;
-      transition: var(--transition);
+    .whatsapp {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: 58px;
+      height: 58px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #1eb980, #158a5f);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 30px rgba(22, 120, 84, 0.18);
+      z-index: 80;
+      text-decoration: none;
+      color: white;
+      font-weight: 700;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       animation: float 3s ease-in-out infinite;
     }
     
     .whatsapp:hover {
       transform: scale(1.1);
-      box-shadow: 0 12px 35px rgba(22,120,84,0.3);
+      box-shadow: 0 12px 35px rgba(22, 120, 84, 0.3);
       animation: pulse 1s ease-in-out infinite;
     }
 
     /* footer */
-    footer{
-      max-width:var(--max);
-      margin:80px auto 0;
-      padding:22px 24px;
-      color:var(--muted);
-      font-size:14px;
+    footer {
+      max-width: 1100px;
+      margin: 80px auto 0;
+      padding: 22px 24px;
+      color: #5b5857;
+      font-size: 14px;
       animation: fadeInUp 1s ease-out 1s both;
       background: #f5f5f5;
       border-top: 1px solid rgba(114, 53, 58, 0.1);
+    }
+
+    #inicio {
+      min-height: 100vh;
     }
 
     /* Seção sobre mim com animações */
@@ -328,37 +340,171 @@
       animation: fadeInLeft 1s ease-out 0.7s both;
     }
 
-    /* responsiveness */
-    @media (max-width:980px){
-      .container{grid-template-columns:1fr;gap:20px;padding-bottom:40px;padding-top:100px}
-      header{padding:12px 18px}
-      .photo-card{order:2}
-      
-      /* Responsividade para seções */
-      #terapia > div{grid-template-columns:1fr !important;gap:20px !important}
-      #sobre > div{grid-template-columns:1fr !important;gap:20px !important}
+    /* Estilos para o container de imagens */
+    .imagens-container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
     }
 
-    @media (max-width:520px){
-      .hero-title{font-size:24px}
-      .therapist-name{font-size:18px}
-      .container{padding-top:120px}
-      
-      /* Ajustes para mobile nas seções */
-      #sobre, #terapia{padding:0 8px}
-      #sobre h3, #terapia h3{font-size:20px}
-      
-      /* Header mobile */
-      header {
-        padding: 15px 18px;
-        flex-direction: column;
-        gap: 15px;
-      }
-      
-      nav {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
+    .imagem-card {
+      background: #bd6c6d;
+      border-radius: 14px;
+      padding: 16px;
+      text-align: center;
+      min-height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+    }
+
+    .imagem-card:nth-child(2) {
+      min-height: 150px;
+    }
+
+    .imagem-card:nth-child(3) {
+      min-height: 120px;
+    }
+
+    .imagem-card:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .imagem-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+      display: block;
+      max-width: 100%;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .imagem-card:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Estilos para as imagens da seção sobre mim */
+    #sobre img {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+    }
+
+    #sobre img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Estilos para a imagem simples (sem card) */
+    .imagem-simples {
+      padding: 20px;
+      text-align: center;
+      overflow: hidden;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .imagem-simples img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      object-fit: cover;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .imagem-simples:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Animações para as seções */
+    #terapia.animate-on-scroll {
+      animation: fadeInUp 1s ease-out 0.3s both;
+    }
+
+    #sobre.animate-on-scroll {
+      animation: fadeInUp 1s ease-out 0.5s both;
+    }
+
+    /* Animações para elementos internos das seções */
+    #terapia .imagem-simples.animate-on-scroll {
+      animation: fadeInLeft 1s ease-out 0.6s both;
+    }
+
+    #terapia .animate-on-scroll:last-child {
+      animation: fadeInRight 1s ease-out 0.8s both;
+    }
+
+    #sobre .animate-on-scroll:first-child {
+      animation: fadeInLeft 1s ease-out 0.7s both;
+    }
+
+    #sobre .imagens-container.animate-on-scroll {
+      animation: fadeInRight 1s ease-out 0.9s both;
+    }
+
+    /* Animações para elementos que entram na tela */
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Efeitos de destaque para elementos importantes */
+    .highlight {
+      position: relative;
+    }
+
+    .highlight::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, #72353A, #bd6c6d);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .highlight:hover::after {
+      transform: scaleX(1);
+    }
+
+    /* Estilos para os cards de dúvidas */
+    .duvida-card {
+      background: white;
+      padding: 24px;
+      border-radius: 14px;
+      border: 1px solid rgba(114, 53, 58, 0.1);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+    }
+
+    .duvida-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px rgba(114, 53, 58, 0.15);
+      border-color: rgba(114, 53, 58, 0.2);
+    }
+
+    .duvida-card h4 {
+      color: #72353A;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .duvida-card p {
+      color: #5b5857;
+      line-height: 1.6;
+      margin: 0;
     }
 
     /* Efeitos de ripple para botões */
@@ -418,7 +564,7 @@
       left: -100%;
       width: 100%;
       height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
       transition: left 0.6s;
     }
 
@@ -426,46 +572,41 @@
       left: 100%;
     }
 
-    /* Animações para elementos que entram na tela */
-    .animate-on-scroll {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .animate-on-scroll.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Efeitos de destaque para elementos importantes */
-    .highlight {
-      position: relative;
-    }
-
-    .highlight::after {
-      content: '';
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background: linear-gradient(90deg, var(--accent), var(--card));
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .highlight:hover::after {
-      transform: scaleX(1);
-    }
-
     /* Melhorias na responsividade das animações */
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms;
+        animation-iteration-count: 1;
+        transition-duration: 0.01ms;
+      }
+    }
+
+    /* responsiveness */
+    @media (max-width: 980px) {
+      .container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding-bottom: 40px;
+        padding-top: 100px;
+      }
+      
+      header {
+        padding: 12px 18px;
+      }
+      
+      .photo-card {
+        order: 2;
+      }
+      
+      /* Responsividade para seções */
+      #terapia > div {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      
+      #sobre > div {
+        grid-template-columns: 1fr;
+        gap: 20px;
       }
     }
 
@@ -478,140 +619,7 @@
       .sobre-grid > div:last-child > div:hover {
         transform: translateY(-3px) scale(1.01);
       }
-    }
-
-
-
-    /* Estilos para o container de imagens */
-    .imagens-container {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .imagem-card {
-      background: var(--card);
-      border-radius: var(--radius);
-      padding: 16px;
-      text-align: center;
-      min-height: 200px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      transition: var(--transition);
-      cursor: pointer;
-    }
-
-    .imagem-card:nth-child(2) {
-      min-height: 150px;
-    }
-
-    .imagem-card:nth-child(3) {
-      min-height: 120px;
-    }
-
-    .imagem-card:hover {
-      transform: translateY(-5px) scale(1.02);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    }
-
-    .imagem-card img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      object-fit: cover;
-      display: block;
-      max-width: 100%;
-      transition: var(--transition);
-    }
-
-    .imagem-card:hover img {
-      transform: scale(1.05);
-    }
-
-    /* Estilos para as imagens da seção sobre mim */
-    #sobre img {
-      transition: var(--transition);
-      cursor: pointer;
-    }
-
-    #sobre img:hover {
-      transform: scale(1.05);
-    }
-
-    /* Responsividade das imagens */
-    @media (max-width: 768px) {
-      #sobre > div > div:last-child {
-        grid-template-columns: 1fr !important;
-        gap: 16px !important;
-      }
       
-      #sobre > div > div:last-child > div {
-        min-height: 180px;
-      }
-    }
-
-    /* Estilos para a imagem simples (sem card) */
-    .imagem-simples {
-      padding: 20px;
-      text-align: center;
-      overflow: hidden;
-      transition: var(--transition);
-    }
-
-    .imagem-simples img {
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-      object-fit: cover;
-      transition: var(--transition);
-    }
-
-    .imagem-simples:hover img {
-      transform: scale(1.05);
-    }
-
-    /* Animações para as seções */
-    #terapia.animate-on-scroll {
-      animation: fadeInUp 1s ease-out 0.3s both;
-    }
-
-    #sobre.animate-on-scroll {
-      animation: fadeInUp 1s ease-out 0.5s both;
-    }
-
-    /* Animações para elementos internos das seções */
-    #terapia .imagem-simples.animate-on-scroll {
-      animation: fadeInLeft 1s ease-out 0.6s both;
-    }
-
-    #terapia .animate-on-scroll:last-child {
-      animation: fadeInRight 1s ease-out 0.8s both;
-    }
-
-    #sobre .animate-on-scroll:first-child {
-      animation: fadeInLeft 1s ease-out 0.7s both;
-    }
-
-    #sobre .imagens-container.animate-on-scroll {
-      animation: fadeInRight 1s ease-out 0.9s both;
-    }
-
-    /* Melhorias nas animações de scroll */
-    .animate-on-scroll {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .animate-on-scroll.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Responsividade para as novas animações */
-    @media (max-width: 768px) {
       .imagem-simples img:hover {
         transform: scale(1.02);
       }
@@ -622,45 +630,49 @@
       #sobre .imagens-container.animate-on-scroll {
         animation: fadeInUp 0.8s ease-out 0.3s both;
       }
-    }
-
-    /* Estilos para os cards de dúvidas */
-    .duvida-card {
-      background: white;
-      padding: 24px;
-      border-radius: var(--radius);
-      border: 1px solid rgba(114, 53, 58, 0.1);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      transition: var(--transition);
-      cursor: pointer;
-    }
-
-    .duvida-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 25px rgba(114, 53, 58, 0.15);
-      border-color: rgba(114, 53, 58, 0.2);
-    }
-
-    .duvida-card h4 {
-      color: var(--accent);
-      font-weight: 600;
-      margin-bottom: 12px;
-    }
-
-    .duvida-card p {
-      color: var(--muted);
-      line-height: 1.6;
-      margin: 0;
-    }
-
-    /* Responsividade para dúvidas */
-    @media (max-width: 768px) {
+      
+      /* Responsividade para dúvidas */
       #duvidas > div {
-        grid-template-columns: 1fr !important;
-        gap: 16px !important;
+        grid-template-columns: 1fr;
+        gap: 16px;
       }
       
       .duvida-card {
         padding: 20px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hero-title {
+        font-size: 24px;
+      }
+      
+      .therapist-name {
+        font-size: 18px;
+      }
+      
+      .container {
+        padding-top: 120px;
+      }
+      
+      /* Ajustes para mobile nas seções */
+      #sobre, #terapia {
+        padding: 0 8px;
+      }
+      
+      #sobre h3, #terapia h3 {
+        font-size: 20px;
+      }
+      
+      /* Header mobile */
+      header {
+        padding: 15px 18px;
+        flex-direction: column;
+        gap: 15px;
+      }
+      
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
       }
     }

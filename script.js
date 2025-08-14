@@ -43,7 +43,7 @@
         });
 
         // Animar elementos específicos das seções
-        const sectionElements = document.querySelectorAll('#services .animate-on-scroll, #sobre .animate-on-scroll, #duvidas .animate-on-scroll');
+        const sectionElements = document.querySelectorAll('#terapia .animate-on-scroll, #sobre .animate-on-scroll, #duvidas .animate-on-scroll');
         sectionElements.forEach((el, index) => {
           el.style.animationDelay = `${0.1 * index}s`;
         });
