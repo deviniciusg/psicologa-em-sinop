@@ -31,24 +31,22 @@
       });
     }, observerOptions);
 
-          // Aplicar animações aos elementos
-      document.addEventListener('DOMContentLoaded', () => {
-        // Animar elementos com classe animate-on-scroll
-        const animateElements = document.querySelectorAll('.animate-on-scroll');
-        animateElements.forEach(el => {
-          el.style.opacity = '0';
-          el.style.transform = 'translateY(30px)';
-          el.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
-          observer.observe(el);
-        });
+    // Aplicar animações aos elementos
+    document.addEventListener('DOMContentLoaded', () => {
+      // Animar elementos com classe animate-on-scroll
+      const animateElements = document.querySelectorAll('.animate-on-scroll');
+      animateElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+        observer.observe(el);
+      });
 
-        // Animar elementos específicos das seções
-        const sectionElements = document.querySelectorAll('#terapia .animate-on-scroll, #sobre .animate-on-scroll, #duvidas .animate-on-scroll');
-        sectionElements.forEach((el, index) => {
-          el.style.animationDelay = `${0.1 * index}s`;
-        });
-
-      
+      // Animar elementos específicos das seções
+      const sectionElements = document.querySelectorAll('#terapia .animate-on-scroll, #sobre .animate-on-scroll, #duvidas .animate-on-scroll');
+      sectionElements.forEach((el, index) => {
+        el.style.animationDelay = `${0.1 * index}s`;
+      });
 
       // Efeito de parallax sutil no header
       let ticking = false;
@@ -157,4 +155,3 @@
         el.style.transform = 'translateY(0)';
       }, 1000 + (index * 100));
     });
-

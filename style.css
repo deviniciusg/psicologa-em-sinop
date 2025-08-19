@@ -8,6 +8,9 @@
       --radius: 14px;
       --max: 1100px;
       --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --section-bg-1: #f9f6f4;
+      --section-bg-2: #f1ebe8;
+      --section-bg-3: #e9e2de;
     }
     
     * {
@@ -581,11 +584,11 @@
       }
     }
 
-    /* responsiveness */
+    /* ==================== RESPONSIVIDADE MOBILE ==================== */
     @media (max-width: 980px) {
       .container {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 0;
         padding-bottom: 40px;
         padding-top: 100px;
       }
@@ -594,19 +597,97 @@
         padding: 12px 18px;
       }
       
+      /* Reorganizar a ordem dos elementos para mobile */
       .photo-card {
+        order: 1;
+        margin-bottom: 30px;
+        border-radius: 0;
+        padding: 15px;
+      }
+      
+      .hero {
         order: 2;
       }
       
-      /* Responsividade para seções */
-      #terapia > div {
-        grid-template-columns: 1fr;
+      /* Ajustar espaçamento entre seções */
+      section {
+        padding: 30px 0;
+        margin: 0;
+        width: 100%;
+      }
+      
+      /* Adicionar cores de fundo alternadas para cada seção */
+      #inicio {
+        background-color: var(--section-bg-1);
+        padding: 30px 20px;
+        margin-bottom: 0;
+        border-bottom: 2px solid #d6c9c2;
+      }
+      
+      #terapia {
+        background-color: var(--section-bg-2);
+        padding: 30px 20px;
+        margin-bottom: 0;
+        border-bottom: 2px solid #d6c9c2;
+      }
+      
+      #sobre {
+        background-color: var(--section-bg-3);
+        padding: 30px 20px;
+        margin-bottom: 0;
+        border-bottom: 2px solid #d6c9c2;
+      }
+      
+      #duvidas {
+        background-color: var(--section-bg-1);
+        padding: 30px 20px;
+        margin-bottom: 0;
+        border-bottom: 2px solid #d6c9c2;
+      }
+      
+      #agende {
+        background-color: var(--section-bg-2);
+        padding: 30px 20px;
+        margin-bottom: 0;
+      }
+      
+      /* Ajustar grid para layout vertical */
+      #terapia > div,
+      #sobre > div {
+        grid-template-columns: 1fr !important;
         gap: 20px;
       }
       
-      #sobre > div {
-        grid-template-columns: 1fr;
-        gap: 20px;
+      /* Garantir que as imagens apareçam primeiro */
+      #terapia > div > .imagem-simples,
+      #sobre > div > .imagens-container {
+        order: 1;
+      }
+      
+      #terapia > div > .animate-on-scroll:last-child,
+      #sobre > div > .animate-on-scroll:first-child {
+        order: 2;
+      }
+      
+      /* Ajustar espaçamento interno dos cards */
+      .duvida-card {
+        padding: 20px;
+      }
+      
+      /* Centralizar conteúdo em mobile */
+      .cta-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+      }
+      
+      .btn-primary, .btn-ghost {
+        text-align: center;
+        justify-content: center;
+      }
+      
+      .info-block {
+        text-align: center;
       }
     }
 
@@ -637,14 +718,39 @@
         gap: 16px;
       }
       
-      .duvida-card {
-        padding: 20px;
+      /* Ajustar tamanhos de fonte para mobile */
+      .hero-title {
+        font-size: 32px;
+        text-align: center;
+      }
+      
+      .hero-sub {
+        text-align: center;
+        font-size: 15px;
+      }
+      
+      /* Ajustar header para mobile */
+      header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+      }
+      
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+      }
+      
+      /* Ajustar padding das seções */
+      #inicio, #terapia, #sobre, #duvidas, #agende {
+        padding: 25px 15px;
       }
     }
 
     @media (max-width: 520px) {
       .hero-title {
-        font-size: 24px;
+        font-size: 28px;
       }
       
       .therapist-name {
@@ -652,27 +758,64 @@
       }
       
       .container {
-        padding-top: 120px;
+        padding-top: 140px;
       }
       
       /* Ajustes para mobile nas seções */
       #sobre, #terapia {
-        padding: 0 8px;
+        padding: 20px 10px;
       }
       
       #sobre h3, #terapia h3 {
         font-size: 20px;
+        text-align: center;
       }
       
-      /* Header mobile */
+      /* Header mobile compacto */
       header {
-        padding: 15px 18px;
-        flex-direction: column;
-        gap: 15px;
+        padding: 12px 15px;
       }
       
-      nav {
-        flex-wrap: wrap;
-        justify-content: center;
+      .brand {
+        font-size: 16px;
       }
+      
+      nav a {
+        font-size: 14px;
+      }
+      
+      /* Ajustar cards de dúvidas */
+      .duvida-card {
+        padding: 15px;
+      }
+      
+      /* Ajustar imagens em cards */
+      .imagem-card {
+        padding: 12px;
+        min-height: 180px;
+      }
+      
+      /* Ajustar botão do WhatsApp flutuante */
+      .whatsapp {
+        width: 50px;
+        height: 50px;
+        right: 15px;
+        bottom: 15px;
+      }
+    }
+
+    /* Estilos específicos para a reorganização mobile */
+    .mobile-image-first {
+      order: 1;
+    }
+    
+    .mobile-content-after {
+      order: 2;
+    }
+    
+    .section-divider {
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #72353A, transparent);
+      margin: 15px 0;
+      width: 100%;
     }
