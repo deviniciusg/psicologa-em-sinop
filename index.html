@@ -9,7 +9,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 
-
 </head>
 <body>
   <header>
@@ -28,13 +27,13 @@
   </header>
 
   <main id="inicio" class="container" role="main">
-    <!-- Imagem primeiro em mobile -->
-    <aside class="photo-card mobile-image-first" aria-hidden="true">
-      <img src="assets/vanessa_sorrindo.png" alt="Vanessa Moura sorrindo"/>
-    </aside>
-
+  
     <!-- Conteúdo depois em mobile -->
-    <section class="hero mobile-content-after">
+    <section class="hero mobile-content-afte mobile">
+      <div class="photo-card mobile-image-first mobile-only mobile" aria-hidden="true">
+        <img src="assets/vanessa_sorrindo.png" alt="Vanessa Moura sorrindo"/>
+      </div>
+
       <h1 class="hero-title highlight">Psicoterapia Online</h1>
       <p class="hero-sub">Atendimento baseado em psicanálise clássica (Freud e Jung), especializado em mulheres que enfrentam ansiedade. Humanizado e acolhedor, para você se conhecer melhor e encontrar seu equilíbrio emocional.</p>
 
@@ -46,24 +45,30 @@
       <div class="info-block">
         <p class="therapist-name">Vanessa Moura</p>
         <p class="credentials">Psicóloga Clínica – CRP 18/8963</p>
-      </div>
+      </div>      
     </section>
 
-    <div class="section-divider"></div>
+    
+
+
+    <!-- Imagem primeiro em mobile -->
+    <aside class="photo-card mobile-image-first" aria-hidden="true">
+      <img class="desktop-only" src="assets/vanessa_sorrindo.png" alt="Vanessa Moura sorrindo"/>
+    </aside>    
 
     <!-- Conteúdo adicional abaixo (ficará abaixo em mobile) -->
-    <section id="terapia" class="animate-on-scroll" style="grid-column:1 / -1;">
+    <section id="terapia" class="animate-on-scroll" style="grid-column:1 / -1; margin-top:20px;">
       <div style="display:grid; grid-template-columns: 300px 1fr; gap:32px; align-items:start;">
-        <!-- Imagem da Vanessa fazendo pose (primeiro em mobile) -->
-        <div class="imagem-simples animate-on-scroll mobile-image-first">
+                <!-- Imagem da Vanessa fazendo pose -->
+        <div class="imagem-simples animate-on-scroll">
           <img src="assets/vanessa_pose.png" alt="Vanessa Moura posando com livro">
         </div>
         
-        <!-- Conteúdo dos serviços (depois em mobile) -->
-        <div class="animate-on-scroll mobile-content-after" style="background:transparent; padding:18px; border-radius:10px;">
-          <h3 style="margin:0 0 8px 0; color:#72353A" class="highlight">Como posso te ajudar?</h3>
-          <p style="margin:0 0 16px 0; color:#5b5857; font-style: italic;">Especializada em mulheres com ansiedade, com abordagem baseada em psicanálise clássica (Freud e Jung)</p>
-          <ul style="margin:0;padding-left:18px;color:#5b5857">
+        <!-- Conteúdo dos serviços -->
+        <div class="animate-on-scroll" style="background:transparent; padding:18px; border-radius:10px;">
+          <h3 style="margin:0 0 8px 0; color:var(--accent)" class="highlight">Como posso te ajudar?</h3>
+          <p style="margin:0 0 16px 0; color:var(--muted); font-style: italic;">Especializada em mulheres com ansiedade, com abordagem baseada em psicanálise clássica (Freud e Jung)</p>
+          <ul style="margin:0;padding-left:18px;color:var(--muted)">
             <li><strong>Ansiedade e crises:</strong> Gestão emocional, ataques de pânico, preocupações excessivas</li>
             <li><strong>Depressão:</strong> Desmotivação, perda de sentido, isolamento social</li>
             <li><strong>Empoderamento feminino:</strong> Autoestima, autoconhecimento, desenvolvimento pessoal</li>
@@ -73,14 +78,29 @@
       </div>
     </section>
 
-    <div class="section-divider"></div>
-
-    <section id="sobre" class="animate-on-scroll" style="grid-column:1 / -1;">
-      <h3 style="margin-bottom:16px;color:#72353A;font-size:24px;" class="highlight">Sobre mim</h3>
+    <section id="sobre" class="animate-on-scroll" style="grid-column:1 / -1;margin-top:16px;">
+      <h3 style="margin-bottom:16px;color:var(--accent);font-size:24px;" class="highlight">Sobre mim</h3>
       
       <div style="display:grid; grid-template-columns: 1fr 300px; gap:32px; align-items:start;">
-        <!-- Imagens empilhadas (primeiro em mobile) -->
-        <div class="imagens-container animate-on-scroll mobile-image-first">
+        <!-- Texto sobre mim -->
+        <div class="animate-on-scroll" style="color:var(--muted);max-width:70ch;margin:0;line-height:1.6;">
+          <p style="margin-bottom:16px;">Meu nome é Vanessa Moura e sou psicóloga clínica – mas isso você talvez já saiba. O que talvez não saiba é que sou mãe do Victor Hugo, apaixonada por gatos e completamente dedicada à minha profissão. Desde pequena, sonhava em ser psicóloga, e foi uma longa jornada até chegar aqui.</p>
+          
+          <p style="margin-bottom:16px;"><strong>Minha especialidade:</strong> Mulheres com Ansiedade. Me identifico muito com Freud e Jung, e gosto muito de estudar a psicanálise clássica. Meu TCC foi sobre "O empoderamento da mulher na prática clínica na psicanálise".</p>
+          
+          <p style="margin-bottom:16px;"><strong>Minha jornada pessoal:</strong> Conheço a ansiedade na pele. Já tive depressão que não me deixava sair de casa. Por isso entendo profundamente o que você está passando. Amo ser psicóloga e poder ajudar outras pessoas a superarem seus desafios.</p>
+          
+          <p style="margin-bottom:16px;"><strong>Minha trajetória:</strong> Nasci em São Paulo, me criei em Goiás, e hoje moro em Mato Grosso. Me formei em Psicologia na UNIFASIPE, em Sinop-MT, e me especializei em Psicanálise, Avaliação Psicológica e Psicodiagnóstico. Atualmente, atendo adultos em consultório online, e sou docente na Faculdade Anhanguera.</p>
+          
+          <p style="margin-bottom:20px;">Essa é parte da minha história – sou humana como você, com minhas próprias lutas e conquistas. Se quiser saber mais sobre meu trabalho ou agendar uma consulta, me chama no WhatsApp. Será um prazer te atender! 💙</p>
+         
+         <a href="https://api.whatsapp.com/send?phone=5551991249688&text=Oi%2C%20gostaria%20de%20saber%20mais%20sobre%20as%20sess%C3%B5es." target="_blank" class="btn-primary" style="display:inline-block;margin-top:8px;">
+           Agendar sessão
+         </a>
+        </div>
+        
+        <!-- Imagens empilhadas à direita -->
+        <div class="imagens-container animate-on-scroll">
           <!-- Imagem da Vanessa com Victor Hugo -->
           <div class="imagem-card">
             <img src="assets/Vanessa_e_vitor.jpg" alt="Vanessa Moura com seu filho Victor Hugo">
@@ -91,72 +111,51 @@
             <img src="assets/vanessa_estudando.png" alt="Vanessa Moura com gatinho">
           </div>
         </div>
-        
-        <!-- Texto sobre mim (depois em mobile) -->
-        <div class="animate-on-scroll mobile-content-after" style="color:#5b5857;max-width:70ch;margin:0;line-height:1.6;">
-          <p style="margin-bottom:16px;">Meu nome é Vanessa Moura e sou psicóloga clínica – mas isso você talvez já saiba. O que talvez não saiba é que sou mãe do Victor Hugo, apaixonada por gatos e completamente dedicada à minha profissão. Desde pequena, sonhava em ser psicóloga, e foi uma longa jornada até chegar aqui.</p>
-          
-          <p style="margin-bottom:16px;"><strong>Minha especialidade:</strong> Mulheres com Ansiedade. Me identifico muito com Freud e Jung, e gosto muito de estudar a psicanálise clássica. Meu TCC foi sobre "O empoderamento da mulher na prática clínica na psicanálise".</p>
-          
-          <p style="margin-bottom:16px;"><strong>Minha jornada pessoal:</strong> Conheci a ansiedade na pele. Já tive depressão que não me deixava sair de casa. Por isso entendo profundamente o que você está passando. Amo ser psicóloga e poder ajudar outras pessoas a superarem seus desafios.</p>
-          
-          <p style="margin-bottom:16px;"><strong>Minha trajetória:</strong> Nasci em São Paulo, me criei em Goiás, e hoje moro em Mato Grosso. Me formei em Psicologia na UNIFASIPE, em Sinop-MT, e me especializei em Psicanálise, Avaliação Psicológica e Psicodiagnóstico. Atualmente, atendo adultos em consultório online, e sou docente na Faculdade Anhanguera.</p>
-          
-          <p style="margin-bottom:20px;">Essa é parte da minha história – sou humana como você, com minhas próprias lutas e conquistas. Se quiser saber mais sobre meu trabalho ou agendar uma consulta, me chama no WhatsApp. Será um prazer te atender! 💙</p>
+      </div>
+    </section>
+
+         <section id="duvidas" class="animate-on-scroll" style="grid-column:1 / -1;margin-top:26px;">
+       <h3 style="margin:0 0 20px 0;color:var(--accent);font-size:24px;" class="highlight">Dúvidas Frequentes</h3>
+       
+       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;">
+         <!-- Dúvida 1 -->
+         <div class="duvida-card">
+           <h4 style="margin:0 0 12px 0;color:var(--accent);font-size:18px;">Como funciona a terapia online?</h4>
+           <p style="margin:0;color:var(--muted);line-height:1.6;">As sessões são realizadas por videochamada, com a mesma qualidade e sigilo da terapia presencial. Você só precisa de um dispositivo com internet e um ambiente tranquilo e privado.</p>
+         </div>
          
-          <a href="https://api.whatsapp.com/send?phone=5551991249688&text=Oi%2C%20gostaria%20de%20saber%20mais%20sobre%20as%20sess%C3%B5es." target="_blank" class="btn-primary" style="display:inline-block;margin-top:8px;">
-            Agendar sessão
-          </a>
-        </div>
-      </div>
-    </section>
+         <!-- Dúvida 2 -->
+         <div class="duvida-card">
+           <h4 style="margin:0 0 12px 0;color:var(--accent);font-size:18px;">Quanto tempo dura cada sessão?</h4>
+           <p style="margin:0;color:var(--muted);line-height:1.6;">Cada sessão tem duração de 50 minutos, uma vez por semana. Este é o padrão recomendado para psicoterapia, permitindo um trabalho contínuo e efetivo.</p>
+         </div>
+         
+         <!-- Dúvida 3 -->
+         <div class="duvida-card">
+           <h4 style="margin:0 0 12px 0;color:var(--accent);font-size:18px;">Preciso ter um problema específico para fazer terapia?</h4>
+           <p style="margin:0;color:var(--muted);line-height:1.6;">Não! A terapia é um espaço de autoconhecimento e desenvolvimento pessoal. Você pode buscar ajuda para questões específicas ou simplesmente para se conhecer melhor.</p>
+         </div>         
 
-    <div class="section-divider"></div>
+       </div>
+     </section>
 
-    <section id="duvidas" class="animate-on-scroll" style="grid-column:1 / -1;">
-      <h3 style="margin:0 0 20px 0;color:#72353A;font-size:24px;" class="highlight">Dúvidas Frequentes</h3>
-      
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;">
-        <!-- Dúvida 1 -->
-        <div class="duvida-card">
-          <h4 style="margin:0 0 12px 0;color:#72353A;font-size:18px;">Como funciona a terapia online?</h4>
-          <p style="margin:0;color:#5b5857;line-height:1.6;">As sessões são realizadas por videochamada, com a mesma qualidade e sigilo da terapia presencial. Você só precisa de um dispositivo com internet e um ambiente tranquilo e privado.</p>
-        </div>
-        
-        <!-- Dúvida 2 -->
-        <div class="duvida-card">
-          <h4 style="margin:0 0 12px 0;color:#72353A;font-size:18px;">Quanto tempo dura cada sessão?</h4>
-          <p style="margin:0;color:#5b5857;line-height:1.6;">Cada sessão tem duração de 50 minutos, uma vez por semana. Este é o padrão recomendado para psicoterapia, permitindo um trabalho contínuo e efetivo.</p>
-        </div>
-        
-        <!-- Dúvida 3 -->
-        <div class="duvida-card">
-          <h4 style="margin:0 0 12px 0;color:#72353A;font-size:18px;">Preciso ter um problema específico para fazer terapia?</h4>
-          <p style="margin:0;color:#5b5857;line-height:1.6;">Não! A terapia é um espaço de autoconhecimento e desenvolvimento pessoal. Você pode buscar ajuda para questões específicas ou simplesmente para se conhecer melhor.</p>
-        </div>         
-      </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <section id="agende" style="grid-column:1 / -1;">
-      <h3 style="margin:0 0 8px 0;color:#72353A;font-size:24px;" class="highlight">Agende sua sessão</h3>
-      <p style="color:#5b5857;margin:0 0 12px 0;">Clique em "Agende sua sessão" ou entre em contato pelo WhatsApp.</p>
-      <a href="https://api.whatsapp.com/send?phone=5551991249688&text=Oi%2C%20gostaria%20de%20saber%20mais%20sobre%20as%20sess%C3%B5es." target="_blank" class="btn-primary" style="display:inline-block;margin-top:8px;">
-        Agendar sessão
-      </a>
-    </section>
+     <section id="agende" style="grid-column:1 / -1;margin-top:26px;">
+       <h3 style="margin:0 0 8px 0;">Agende</h3>
+       <p style="color:var(--muted);margin:0 0 12px 0;">Clique em "Agende sua sessão" ou entre em contato pelo WhatsApp.</p>
+     </section>
 
   </main>
 
   <a class="whatsapp" href="https://wa.me/5551991249688?text=Ol%C3%A1%20Vanessa%2C%20gostaria%20de%20agendar%20uma%20sess%C3%A3o" target="_blank" aria-label="Abrir conversa no WhatsApp">
+    <!-- simples ícone SVG -->
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
       <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
     </svg>
   </a>
 
   <footer>
-    <div style="max-width:1100px;margin:0 auto;padding:0 24px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;">
+    <div style="max-width:var(--max);margin:0 auto;padding:0 24px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;">
+      
       <div>
         © <strong>Vanessa Moura</strong> — Psicóloga Clínica • CRP 18/8963
       </div>
@@ -170,8 +169,10 @@
           </svg>
         </a>
       </div>
+  
     </div>
   </footer>
+  
 
   <script src="script.js"></script>
 </body>
