@@ -2,10 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.colors: {
-  color: #1f2933;
-  bgalt: #F5F3F2;
-}
+
 
     :root{
       --bg: #E0D7D2; /* suave bege */
@@ -23,7 +20,6 @@
     body{
       margin:0;
       font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
-      background:var(--bg);
       color:var(--text);
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;

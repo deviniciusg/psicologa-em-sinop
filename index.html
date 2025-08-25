@@ -38,7 +38,7 @@
   <header class="fixed top-0 left-0 right-0 bg-footer/90 backdrop-blur-md border-b border-accent/20 z-50">
     <div class="max-w-[1100px] mx-auto px-6 py-4 flex items-center justify-between">
       <div class="text-accent font-bold text-lg hover:text-card transition">
-        Vanessa Moura — CRP 18/8963
+        Vanessa Moura – CRP 18/8963 
       </div>
       <nav class="flex gap-6 text-muted font-medium">
         <a href="#inicio" class="hover:text-accent">Início</a>
@@ -55,9 +55,20 @@
   </header>
 
   <!-- Hero -->
-  <main class="bg-bgalt max-w-[1100px] mx-auto px-6 pt-60 pb-20 grid md:grid-cols-[1fr_460px] gap-10 items-center">
+  <main class="bg-bgalt max-w-[1100px] mx-auto px-6 pt-40 pb-20 grid md:grid-cols-[1fr_460px] gap-10 items-center">
     <section>
-      <h1 class="text-center sm:text-left text-accent text-4xl md:text-5xl font-bold leading-tight mb-4">Psicoterapia Online</h1>
+
+      <h1 class="max-sm:hidden text-center sm:text-left text-accent text-4xl md:text-5xl font-bold leading-tight mb-4">Psicoterapia Online</h1>            
+      <div  class="sm:hidden mb-6">        
+        <div class="md:flex justify-center items-center bg-card rounded-xl p-6 shadow-lg">
+          <img src="assets/vanessa_sorrindo.png" alt="Vanessa Moura sorrindo" class="rounded-lg transition-transform hover:scale-105"/>
+        </div>
+        <div class="text-center sm:text-left">
+          <p class="text-lg font-bold">Vanessa Moura</p>
+          <p class="text-sm text-muted">Psicóloga Clínica – CRP 18/8963</p>
+        </div>
+      </div>
+      
       <p class="text-center sm:text-left text-muted max-w-[54ch] mb-6">
         Atendimento baseado em psicanálise clássica (Freud e Jung), especializado em mulheres que enfrentam ansiedade. Humanizado e acolhedor, para você se conhecer melhor e encontrar seu equilíbrio emocional.
       </p>
@@ -70,9 +81,10 @@
         <a href="#sobre" class="text-center sm:text-left border text-muted hover:text-accent hover:border-accent px-5 py-3 rounded-lg transition">
           Conheça minha história
         </a>
-      </div>
+      </div>    
 
-      <div class="text-center sm:text-left">
+
+      <div class="text-center sm:text-left max-sm:hidden">
         <p class="text-lg font-bold">Vanessa Moura</p>
         <p class="text-sm text-muted">Psicóloga Clínica – CRP 18/8963</p>
       </div>
@@ -86,32 +98,51 @@
 
   <!-- Terapia -->
   <section id="terapia" class="bg-bg text-center sm:text-left max-w-[1100px] mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
-    <div>
-      <h2 class="text-accent text-3xl font-bold mb-6">Como funciona a psicoterapia?</h2>
-      <p class="text-muted mb-4">A psicoterapia é um espaço de acolhimento e escuta, onde você pode compartilhar suas angústias e dificuldades em um ambiente seguro e sigiloso.</p>
-      <p class="text-muted mb-4">As sessões acontecem online, com duração de 50 minutos, uma vez por semana. O foco é proporcionar autoconhecimento, melhorar relacionamentos e reduzir sintomas de ansiedade.</p>
-      <p class="text-muted">Atendo adultos em busca de desenvolvimento pessoal, autoconhecimento e melhora no bem-estar emocional.</p>
+    <div class="text-center sm:text-left bg-bgalt py-20">
+      <img src="assets/vanessa_pose.png" alt="Vanessa pose" class="rounded-xl shadow-lg max-w-full"/>
     </div>
-    <div class="flex justify-center">
-      <img src="assets/atendimento_online.png" alt="Atendimento online" class="rounded-xl shadow-lg max-w-full"/>
+    <div>        
+      <h2 class="text-accent text-3xl font-bold mb-6"">Como posso te ajudar?</h2>
+      <p class="text-muted mb-4">Especializada em mulheres com ansiedade, com abordagem baseada em psicanálise clássica (Freud e Jung)</p>
+      <ul class="list-inside text-muted space-y-2 max-w-[54ch]">
+        <li><strong>Ansiedade e crises:</strong> Gestão emocional, ataques de pânico, preocupações excessivas</li>
+        <li><strong>Depressão:</strong> Desmotivação, perda de sentido, isolamento social</li>
+        <li><strong>Empoderamento feminino:</strong> Autoestima, autoconhecimento, desenvolvimento pessoal</li>
+        <li><strong>Relacionamentos:</strong> Família, comunicação, conflitos interpessoais</li>
+      </ul>        
     </div>
   </section>
 
   <!-- Sobre mim -->
   <section id="sobre" class="text-center sm:text-left bg-bgalt py-20">
     <div class="max-w-[1100px] mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-      <img src="assets/vanessa_formal.png" alt="Vanessa Moura" class="rounded-xl shadow-lg max-w-full"/>
       <div>
         <h2 class="text-accent text-3xl font-bold mb-6">Sobre mim</h2>
-        <p class="text-muted mb-4">Sou Vanessa Moura, psicóloga clínica formada pela Universidade Federal de Mato Grosso. Trabalho com base na psicanálise clássica, com especialização em Freud e Jung.</p>
-        <p class="text-muted mb-4">Meu objetivo é proporcionar um atendimento humano, acolhedor e livre de julgamentos, para que cada pessoa possa se conhecer melhor e transformar sua vida.</p>
-        <p class="text-muted">Atendo especialmente mulheres que lidam com ansiedade, ajudando a desenvolver autoconfiança e equilíbrio emocional.</p>
+        <div class="animate-on-scroll text-muted mb-4 space-y-4 max-w-[54ch]">
+          <p>Meu nome é Vanessa Moura e sou psicóloga clínica – mas isso você talvez já saiba. O que talvez não saiba é que sou mãe do Victor Hugo, apaixonada por gatos e completamente dedicada à minha profissão. Desde pequena, sonhava em ser psicóloga, e foi uma longa jornada até chegar aqui.</p>
+          
+          <p><strong>Minha especialidade:</strong> Mulheres com Ansiedade. Me identifico muito com Freud e Jung, e gosto muito de estudar a psicanálise clássica. Meu TCC foi sobre "O empoderamento da mulher na prática clínica na psicanálise".</p>
+          
+          <p><strong>Minha jornada pessoal:</strong> Conheço a ansiedade na pele. Já tive depressão que não me deixava sair de casa. Por isso entendo profundamente o que você está passando. Amo ser psicóloga e poder ajudar outras pessoas a superarem seus desafios.</p>
+          
+          <p><strong>Minha trajetória:</strong> Nasci em São Paulo, me criei em Goiás, e hoje moro em Mato Grosso. Me formei em Psicologia na UNIFASIPE, em Sinop-MT, e me especializei em Psicanálise, Avaliação Psicológica e Psicodiagnóstico. Atualmente, atendo adultos em consultório online, e sou docente na Faculdade Anhanguera.</p>
+          
+          <p>Essa é parte da minha história – sou humana como você, com minhas próprias lutas e conquistas. Se quiser saber mais sobre meu trabalho ou agendar uma consulta, me chama no WhatsApp. Será um prazer te atender! 💙</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-1 gap-6 self-start">          
+        <div class="md:flex justify-center items-center bg-card rounded-xl p-6 shadow-lg">
+          <img src="assets/Vanessa_e_vitor.jpg" alt="Vanessa Moura e Vitor Hugo" class="rounded-xl max-w-full"/>
+        </div>
+        <div class="md:flex justify-center items-center bg-card rounded-xl p-6 shadow-lg">
+          <img src="assets/vanessa_estudando.png" alt="Vanessa Moura estudando" class="rounded-xl max-w-full"/>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Dúvidas -->
-  <section id="duvidas" class="bg-bg text-center sm:text-left max-w-[1100px] mx-auto px-6 py-20">
+  <section id="duvidas" class="bg-bgalt text-center sm:text-left max-w-[1100px] mx-auto px-6 py-20">
     <h2 class="text-accent text-3xl font-bold text-center mb-12">Dúvidas frequentes</h2>
     <div class="grid md:grid-cols-2 gap-8">
       <div class="bg-white rounded-xl shadow-md p-6">
