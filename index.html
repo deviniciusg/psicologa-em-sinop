@@ -55,7 +55,7 @@
   </header>
 
   <!-- Hero -->
-  <main class=" bg-bgalt w-full py-16 pt-40 px-6">
+  <main class="hidden bg-bgalt w-full py-16 pt-40 px-6">
     <div class="max-w-[1100px] mx-auto w-full grid md:grid-cols-[1fr_460px] gap-10 items-center">
       <section>
           <h1 class="max-sm:hidden text-center sm:text-left text-accent text-4xl md:text-5xl font-bold leading-tight mb-4">Psicoterapia Online</h1>            
@@ -99,7 +99,7 @@
   </main>
 
   <!-- Terapia -->
-  <section id="terapia" class="bg-bg w-full py-16 px-6 text-center sm:text-left">
+  <section id="terapia" class="hidden bg-bg w-full py-16 px-6 text-center sm:text-left">
     <div class="max-w-[1100px] mx-auto items-center px-6 grid md:grid-cols-2 gap-12">
       <div class="text-center sm:text-left md:py-20">
         <img src="assets/vanessa_pose.png" alt="Vanessa pose" class="rounded-xl max-w-full"/>
@@ -118,10 +118,13 @@
   </section>
 
   <!-- Sobre mim -->
-  <section id="sobre" class="text-center sm:text-left bg-bgalt">
+  <section id="sobre" class="text-center sm:text-left py-16 bg-bgalt">
     <div class="max-w-[1100px] mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
       <div>
         <h2 class="text-accent text-3xl font-bold mb-6">Sobre mim</h2>
+        <div class="sm:hidden justify-center items-center bg-card rounded-xl my-10 p-6 shadow-lg">
+          <img src="assets/vanessa_estudando.png" alt="Vanessa Moura estudando" class="rounded-xl max-w-full"/>
+        </div>
         <div class="animate-on-scroll text-muted mb-4 space-y-4 max-w-[54ch]">
           <p>Meu nome é Vanessa Moura e sou psicóloga clínica – mas isso você talvez já saiba. O que talvez não saiba é que sou mãe do Victor Hugo, apaixonada por gatos e completamente dedicada à minha profissão. Desde pequena, sonhava em ser psicóloga, e foi uma longa jornada até chegar aqui.</p>
           
@@ -134,11 +137,11 @@
           <p>Essa é parte da minha história – sou humana como você, com minhas próprias lutas e conquistas. Se quiser saber mais sobre meu trabalho ou agendar uma consulta, me chama no WhatsApp. Será um prazer te atender! 💙</p>
         </div>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-1 gap-6 self-start">          
-        <div class="h md:flex justify-center items-center bg-card rounded-xl p-6 shadow-lg max-sm:hidden">
+      <div class="grid gap-6 self-start">          
+        <div class="md:flex justify-center items-center bg-card rounded-xl p-6 shadow-lg max-sm:hidden">
           <img src="assets/Vanessa_e_vitor.jpg" alt="Vanessa Moura e Vitor Hugo" class="rounded-xl max-w-full"/>
         </div>
-        <div class="md:flex justify-center items-center bg-card rounded-xl p-6 shadow-lg">
+        <div class="md:flex justify-center items-center bg-card rounded-xl p-6 shadow-lg max-sm:hidden">
           <img src="assets/vanessa_estudando.png" alt="Vanessa Moura estudando" class="rounded-xl max-w-full"/>
         </div>
       </div>
