@@ -77,3 +77,26 @@
         transform: translateY(-10px);
       }
     }
+
+    .fade-in-up {
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    .fade-in-left {
+      animation: fadeInLeft 0.8s ease forwards;
+    }
+
+    .fade-in-right {
+      animation: fadeInRight 0.8s ease forwards;
+    }
+
+    .pulse {
+      animation: pulse 1.5s infinite;
+    }
+
+    .float {
+      animation: float 3s ease-in-out infinite;
+    }
+  
+
+    

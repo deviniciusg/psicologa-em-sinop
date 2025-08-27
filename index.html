@@ -26,7 +26,25 @@
             },
             borderRadius: {
               xl: '14px',
-            }
+            },
+            keyframes: {
+              slideInLeft: {
+                '0%': { transform: 'translateX(-50px)', opacity: '0' },
+                '100%': { transform: 'translateX(0)', opacity: '1' },
+              },
+              slideInRight: {
+                '0%': { transform: 'translateX(50px)', opacity: '0' },
+                '100%': { transform: 'translateX(0)', opacity: '1' },
+              },
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              bounce: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+            },
           }
         }
       }
@@ -35,7 +53,7 @@
 <body class="bg-bg text-text font-sans mx-auto">  
 
   <!-- Header -->
-  <header class="fixed top-0 left-0 right-0 bg-footer/90 backdrop-blur-md border-b border-accent/20 z-50">
+  <header class=" fixed top-0 left-0 right-0 bg-footer/90 backdrop-blur-md border-b border-accent/20 z-50">
     <div class="max-w-[1100px] mx-auto px-6 py-4 flex items-center justify-between">
       <div class="text-accent font-bold text-lg hover:text-card transition">
         Vanessa Moura – CRP 18/8963 
@@ -54,22 +72,28 @@
     </div>
   </header>
 
+
+  <!-- Botão Whatsapp -->
+  <a href="https://api.whatsapp.com/send?phone=5551991249688&text=Oi%2C%20gostaria%20de%20saber%20mais%20sobre%20as%20sess%C3%B5es." target="_blank" aria-label="Agende sua sessão pelo WhatsApp">
+    <button class="fixed p-0 bottom-6 right-6 z-200 w-16 h-16 rounded-full cursor-pointer flex items-center justify-center hover:scale-110 transition-transform">
+      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48"> <path fill="#fff" d="M4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5c5.1,0,9.8,2,13.4,5.6 C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19c0,0,0,0,0,0h0c-3.2,0-6.3-0.8-9.1-2.3L4.9,43.3z"></path><path fill="#fff" d="M4.9,43.8c-0.1,0-0.3-0.1-0.4-0.1c-0.1-0.1-0.2-0.3-0.1-0.5L7,33.5c-1.6-2.9-2.5-6.2-2.5-9.6 C4.5,13.2,13.3,4.5,24,4.5c5.2,0,10.1,2,13.8,5.7c3.7,3.7,5.7,8.6,5.7,13.8c0,10.7-8.7,19.5-19.5,19.5c-3.2,0-6.3-0.8-9.1-2.3 L5,43.8C5,43.8,4.9,43.8,4.9,43.8z"></path><path fill="#cfd8dc" d="M24,5c5.1,0,9.8,2,13.4,5.6C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19h0c-3.2,0-6.3-0.8-9.1-2.3 L4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5 M24,43L24,43L24,43 M24,43L24,43L24,43 M24,4L24,4C13,4,4,13,4,24 c0,3.4,0.8,6.7,2.5,9.6L3.9,43c-0.1,0.3,0,0.7,0.3,1c0.2,0.2,0.4,0.3,0.7,0.3c0.1,0,0.2,0,0.3,0l9.7-2.5c2.8,1.5,6,2.2,9.2,2.2 c11,0,20-9,20-20c0-5.3-2.1-10.4-5.8-14.1C34.4,6.1,29.4,4,24,4L24,4z"></path><path fill="#40c351" d="M35.2,12.8c-3-3-6.9-4.6-11.2-4.6C15.3,8.2,8.2,15.3,8.2,24c0,3,0.8,5.9,2.4,8.4L11,33l-1.6,5.8 l6-1.6l0.6,0.3c2.4,1.4,5.2,2.2,8,2.2h0c8.7,0,15.8-7.1,15.8-15.8C39.8,19.8,38.2,15.8,35.2,12.8z"></path><path fill="#fff" fill-rule="evenodd" d="M19.3,16c-0.4-0.8-0.7-0.8-1.1-0.8c-0.3,0-0.6,0-0.9,0 s-0.8,0.1-1.3,0.6c-0.4,0.5-1.7,1.6-1.7,4s1.7,4.6,1.9,4.9s3.3,5.3,8.1,7.2c4,1.6,4.8,1.3,5.7,1.2c0.9-0.1,2.8-1.1,3.2-2.3 c0.4-1.1,0.4-2.1,0.3-2.3c-0.1-0.2-0.4-0.3-0.9-0.6s-2.8-1.4-3.2-1.5c-0.4-0.2-0.8-0.2-1.1,0.2c-0.3,0.5-1.2,1.5-1.5,1.9 c-0.3,0.3-0.6,0.4-1,0.1c-0.5-0.2-2-0.7-3.8-2.4c-1.4-1.3-2.4-2.8-2.6-3.3c-0.3-0.5,0-0.7,0.2-1c0.2-0.2,0.5-0.6,0.7-0.8 c0.2-0.3,0.3-0.5,0.5-0.8c0.2-0.3,0.1-0.6,0-0.8C20.6,19.3,19.7,17,19.3,16z" clip-rule="evenodd">
+        <path fill="#fff" d="M4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5c5.1,0,9.8,2,13.4,5.6	C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19c0,0,0,0,0,0h0c-3.2,0-6.3-0.8-9.1-2.3L4.9,43.3z"/>
+        <path fill="#40c351" d="M35.2,12.8c-3-3-6.9-4.6-11.2-4.6C15.3,8.2,8.2,15.3,8.2,24c0,3,0.8,5.9,2.4,8.4L11,33l-1.6,5.8	l6-1.6l0.6,0.3c2.4,1.4,5.2,2.2,8,2.2h0c8.7,0,15.8-7.1,15.8-15.8C39.8,19.8,38.2,15.8,35.2,12.8z"/>
+      </svg>
+    </button>
+  </a>
+
   <!-- Hero -->
-
-<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
-  <path fill="#fff" d="M4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5c5.1,0,9.8,2,13.4,5.6	C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19c0,0,0,0,0,0h0c-3.2,0-6.3-0.8-9.1-2.3L4.9,43.3z"></path><path fill="#fff" d="M4.9,43.8c-0.1,0-0.3-0.1-0.4-0.1c-0.1-0.1-0.2-0.3-0.1-0.5L7,33.5c-1.6-2.9-2.5-6.2-2.5-9.6	C4.5,13.2,13.3,4.5,24,4.5c5.2,0,10.1,2,13.8,5.7c3.7,3.7,5.7,8.6,5.7,13.8c0,10.7-8.7,19.5-19.5,19.5c-3.2,0-6.3-0.8-9.1-2.3	L5,43.8C5,43.8,4.9,43.8,4.9,43.8z"></path><path fill="#cfd8dc" d="M24,5c5.1,0,9.8,2,13.4,5.6C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19h0c-3.2,0-6.3-0.8-9.1-2.3	L4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5 M24,43L24,43L24,43 M24,43L24,43L24,43 M24,4L24,4C13,4,4,13,4,24	c0,3.4,0.8,6.7,2.5,9.6L3.9,43c-0.1,0.3,0,0.7,0.3,1c0.2,0.2,0.4,0.3,0.7,0.3c0.1,0,0.2,0,0.3,0l9.7-2.5c2.8,1.5,6,2.2,9.2,2.2	c11,0,20-9,20-20c0-5.3-2.1-10.4-5.8-14.1C34.4,6.1,29.4,4,24,4L24,4z"></path><path fill="#40c351" d="M35.2,12.8c-3-3-6.9-4.6-11.2-4.6C15.3,8.2,8.2,15.3,8.2,24c0,3,0.8,5.9,2.4,8.4L11,33l-1.6,5.8	l6-1.6l0.6,0.3c2.4,1.4,5.2,2.2,8,2.2h0c8.7,0,15.8-7.1,15.8-15.8C39.8,19.8,38.2,15.8,35.2,12.8z"></path><path fill="#fff" fill-rule="evenodd" d="M19.3,16c-0.4-0.8-0.7-0.8-1.1-0.8c-0.3,0-0.6,0-0.9,0	s-0.8,0.1-1.3,0.6c-0.4,0.5-1.7,1.6-1.7,4s1.7,4.6,1.9,4.9s3.3,5.3,8.1,7.2c4,1.6,4.8,1.3,5.7,1.2c0.9-0.1,2.8-1.1,3.2-2.3	c0.4-1.1,0.4-2.1,0.3-2.3c-0.1-0.2-0.4-0.3-0.9-0.6s-2.8-1.4-3.2-1.5c-0.4-0.2-0.8-0.2-1.1,0.2c-0.3,0.5-1.2,1.5-1.5,1.9	c-0.3,0.3-0.6,0.4-1,0.1c-0.5-0.2-2-0.7-3.8-2.4c-1.4-1.3-2.4-2.8-2.6-3.3c-0.3-0.5,0-0.7,0.2-1c0.2-0.2,0.5-0.6,0.7-0.8	c0.2-0.3,0.3-0.5,0.5-0.8c0.2-0.3,0.1-0.6,0-0.8C20.6,19.3,19.7,17,19.3,16z" clip-rule="evenodd"></path>
-</svg>
-
-  <main class="bg-bgalt w-full py-16 pt-40 px-6">
+  <main id="inicio" class="bg-bgalt w-full py-20 pt-40 px-6">
     <div class="max-w-[1100px] mx-auto w-full grid md:grid-cols-[1fr_460px] gap-10 items-center">
       <section>
           <h1 class="max-sm:hidden text-center sm:text-left text-accent text-4xl md:text-5xl font-bold leading-tight mb-4">Psicoterapia Online</h1>            
           <div  class="sm:hidden mb-6">
-            <div class="md:flex justify-center items-center bg-card rounded-xl p-3 shadow-lg">
+            <div class="md:flex justify-center z-50 items-center bg-card rounded-xl p-3 shadow-lg">
               <img src="assets/vanessa_sorrindo.png" alt="Vanessa Moura sorrindo" class="rounded-lg transition-transform hover:scale-105"/>
             </div>
             <div class="text-center sm:text-left pt-3">
-              <p class="text-lg font-bold">Vanessa Moura</p>
+              <p class="text-lg animate-fadeInUp font-bold">Vanessa Moura</p>
               <p class="text-sm text-muted">Psicóloga Clínica – CRP 18/8963</p>
             </div>
           </div>
@@ -97,7 +121,7 @@
 
       <!-- Foto -->
       <aside class="hidden md:flex justify-center items-center bg-card rounded-xl p-3 shadow-lg">
-        <img src="assets/vanessa_sorrindo.png" alt="Vanessa Moura sorrindo" class="rounded-lg transition-transform hover:scale-105"/>
+        <img src="assets/vanessa_sorrindo.png" alt="Vanessa Moura sorrindo" class="fade-in-up rounded-lg transition-transform hover:scale-105"/>
       </aside>
 
     </div>
@@ -107,7 +131,7 @@
   <section id="terapia" class="bg-bg w-full py-16 px-6 text-center sm:text-left">
     <div class="max-w-[1100px] mx-auto items-center px-6 grid md:grid-cols-2 gap-12">
       <div class="text-center sm:text-left md:py-20">
-        <img src="assets/vanessa_pose.png" alt="Vanessa pose" class="rounded-xl max-w-full"/>
+        <img src="assets/vanessa_pose.png" alt="Vanessa pose" class="rounded-xl max-w-full  transition-transform hover:scale-105"/>
       </div>
       <div>        
         <h2 class="text-accent text-3xl font-bold mb-6">Como posso te ajudar?</h2>
@@ -126,7 +150,7 @@
   <section id="sobre" class="text-center sm:text-left py-16 bg-bgalt">
     <div class="max-w-[1100px] mx-auto px-6 grid md:grid-cols-3 gap-12 items-center">
       <div class="md:col-span-2">
-        <img src="assets/Vanessa_e_vitor.jpg" alt="Vanessa Moura e Vitor Hugo" class="max-w-full sm:hidden justify-center items-center rounded-xl p-3 "/>
+        <img src="assets/Vanessa_e_vitor.jpg" alt="Vanessa Moura e Vitor Hugo" class="max-w-full sm:hidden justify-center items-center rounded-xl p-3  transition-transform hover:scale-105"/>
         <h2 class="text-accent text-3xl font-bold mb-6">Sobre mim</h2>
         <div class="animate-on-scroll text-muted mb-4 space-y-4 md:max-w-33vw">
           <p>Meu nome é Vanessa Moura e sou psicóloga clínica – mas isso você talvez já saiba. O que talvez não saiba é que sou mãe do Victor Hugo, apaixonada por gatos e completamente dedicada à minha profissão. Desde pequena, sonhava em ser psicóloga, e foi uma longa jornada até chegar aqui.</p>
@@ -144,32 +168,32 @@
       </div>
       <div class="grid gap-6 self-start">          
         <div class="md:flex justify-center items-center bg-card rounded-xl p-3 shadow-lg max-sm:hidden">
-          <img src="assets/Vanessa_e_vitor.jpg" alt="Vanessa Moura e Vitor Hugo" class="rounded-xl max-w-full"/>
+          <img src="assets/Vanessa_e_vitor.jpg" alt="Vanessa Moura e Vitor Hugo" class="rounded-xl max-w-full transition-transform hover:scale-105"/>
         </div>
         <div class="md:flex justify-center items-center bg-card rounded-xl p-3 shadow-lg max-sm:hidden">
-          <img src="assets/vanessa_estudando.png" alt="Vanessa Moura estudando" class="rounded-xl max-w-full"/>
+          <img src="assets/vanessa_estudando.png" alt="Vanessa Moura estudando" class="rounded-xl max-w-full transition-transform hover:scale-105"/>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Dúvidas -->
-  <section id="duvidas" class=" text-center sm:text-left max-w-[1100px] mx-auto px-6 py-20">
+  <section id="duvidas" class="bg-bg text-center sm:text-left max-w-[1100px] mx-auto px-6 py-20">
     <h2 class="text-accent text-3xl font-bold text-center mb-12">Dúvidas frequentes</h2>
     <div class="grid md:grid-cols-2 gap-8">
-      <div class="bg-white rounded-xl shadow-md p-6">
+      <div class="bg-white rounded-xl shadow-md p-6 transition-transform hover:scale-105">
         <h3 class="font-semibold text-lg mb-2">Como funciona a terapia online?</h3>
         <p class="text-muted">As sessões são realizadas por videochamada, com a mesma qualidade e sigilo do atendimento presencial.</p>
       </div>
-      <div class="bg-white rounded-xl shadow-md p-6">
+      <div class="bg-white rounded-xl shadow-md p-6 transition-transform hover:scale-105">
         <h3 class="font-semibold text-lg mb-2">Quanto tempo dura cada sessão?</h3>
         <p class="text-muted">Cada sessão tem duração média de 50 minutos, realizadas semanalmente.</p>
       </div>
-      <div class="bg-white rounded-xl shadow-md p-6">
+      <div class="bg-white rounded-xl shadow-md p-6 transition-transform hover:scale-105">
         <h3 class="font-semibold text-lg mb-2">O atendimento é sigiloso?</h3>
         <p class="text-muted">Sim. O sigilo é um direito garantido pelo código de ética profissional da psicologia.</p>
       </div>
-      <div class="bg-white rounded-xl shadow-md p-6">
+      <div class="bg-white rounded-xl shadow-md p-6 transition-transform hover:scale-105">
         <h3 class="font-semibold text-lg mb-2">Preciso de diagnóstico para iniciar?</h3>
         <p class="text-muted">Não. Qualquer pessoa pode buscar a terapia para autoconhecimento e melhora no bem-estar.</p>
       </div>
@@ -179,13 +203,20 @@
 
   <!-- Footer -->
   <footer class="bg-footer border-t border-accent/20 py-6">
-    <div class="mx-auto px-6 text-center text-text">
+    <div class="mx-auto px-6 text-center text-text flex-wrap gap-4 justify-center items-center">  
       © <strong>Vanessa Moura</strong> — Psicóloga Clínica • CRP 18/8963  
-      <div class="mt-2 flex justify-center gap-4 text-sm">
+      <div class="mt-2 gap-4 text-sm flex-wrap flex justify-center items-center">
         <a href="tel:+5551991249688" class="hover:text-accent">+55 (51) 99124-9688</a>
-        <a href="mailto:vanessa@example.com" class="hover:text-accent">vanessa@example.com</a>
-        <a href="https://instagram.com/seu_instagram" target="_blank" class="hover:text-accent">Instagram</a>
+        <a href="mailto:vanessa@example.com" class="hover:text-accent">✉ psi.vanessamoura0@gmail.com</a>
+        <a href="https://instagram.com/psicologaemsinop/" target="_blank" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:5px;">
+          <svg xmlns="http://www.w3.org/2000/svg" class="hover:text-accent" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+          </svg>
+        </a>
+        
       </div>
+    </div>
+
     </div>
   </footer>
 
