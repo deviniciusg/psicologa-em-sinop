@@ -1,9 +1,8 @@
-<style>
   /* 1. Classe base para todos os elementos animados */
   .animate-on-scroll {
     opacity: 0;
     /* Define a transição suave para opacidade e posição */
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   }
 
   /* 2. Classes de direção (definem o estado inicial, antes de aparecer) */
@@ -25,7 +24,8 @@
   
   /* Adicionando um efeito de cascata (stagger) para as dúvidas */
   .stagger-children > * {
-    transition-delay: var(--stagger-delay, 0ms);
+    transition-delay: var(--stagger-delay, 0ms);    
+
   }
 
 
@@ -34,4 +34,3 @@
     opacity: 1;
     transform: none; /* Reseta qualquer transformação (translate) */
   }
-</style>
