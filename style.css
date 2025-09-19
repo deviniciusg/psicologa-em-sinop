@@ -1,4 +1,43 @@
-  /* 1. Classe base para todos os elementos animados */
+  /*
+    Animação para o cabeçalho aparecer suavemente.
+    Ela será aplicada diretamente no seletor do header.
+  */
+  @keyframes fade-down-animation {
+    /* Estado inicial: transparente e um pouco acima */
+    from {
+      opacity: 0;
+      transform: translateY(-100%); /* Começa totalmente fora da tela, acima */
+    }
+    /* Estado final: visível e na posição correta */
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /*
+    Aplicação da animação no cabeçalho.
+  */
+  #main-header {
+    /*
+      animation: [nome-da-animação] [duração] [timing-function] [delay] [fill-mode];
+      - ease-out: Começa rápido e desacelera no final.
+      - forwards: Mantém o estado final da animação (opacity: 1, transform: translateY(0)).
+    */
+    animation: fade-down-animation 0.8s ease-out forwards;
+  }
+
+  /*
+    (Opcional, mas recomendado)
+    Adiciona um padding no topo do corpo da página para que o conteúdo
+    da primeira seção não comece escondido atrás do cabeçalho fixo.
+    Ajuste o valor (ex: 80px) com base na altura do seu header.
+  */
+  body {
+    padding-top: 80px; /* Ajuste este valor conforme a altura do seu cabeçalho */
+  }
+
+/* 1. Classe base para todos os elementos animados */
   .animate-on-scroll {
     opacity: 0;
     /* Define a transição suave para opacidade e posição */

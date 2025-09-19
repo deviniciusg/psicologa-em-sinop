@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Vanessa Moura — Psicoterapia Online</title>
+  <title>Vanessa Moura — Terapia Online</title>
   <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/style.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
       tailwind.config = {
@@ -23,20 +23,20 @@
   </script>  
 
 </head>
-<body class="bg-bg text-text font-sans mx-auto">  
+<body class="bg-bgalt text-text font-sans mx-auto">  
 
-  <header class="lg:fixed top-0 left-0 right-0 bg-footer/90 backdrop-blur-md border-b border-accent/20 z-50 animate-on-scroll fade-down">
-    <div class="max-w-[1100px] mx-auto px-6 py-4 flex items-center justify-center md:justify-between">
-      <img src="assets/logo.png" alt="Logo Vanessa Moura Psicóloga" class="h-10 w-auto mr-4"/>      
-      <nav class="hidden md:flex gap-6 text-muted font-medium items-center">
-        <a href="#inicio" class="hover:text-accent">Início</a>
-        <a href="#terapia" class="hover:text-accent">Terapia</a>
-        <a href="#sobre" class="hover:text-accent">Sobre mim</a>
-        <a href="#duvidas" class="hover:text-accent">Dúvidas</a>
-        <a href="https://api.whatsapp.com/send?phone=5551991249688&amp;text=Oi%2C%20gostaria%20de%20saber%20mais%20sobre%20as%20sess%C3%B5es." target="_blank" class="bg-accent text-white px-3 py-2 rounded-lg shadow text-center hover:bg-card">Agendar sessão</a>
-      </nav>      
-    </div>
-  </header>
+<header id="main-header" class="fixed top-0 left-0 right-0 bg-footer/90 backdrop-blur-md border-b border-accent/20 z-50">
+  <div class="max-w-[1100px] mx-auto px-6 py-5 flex items-center justify-center md:justify-between">
+    <img src="assets/logo.png" alt="Logo Vanessa Moura Psicóloga" class="h-10 w-auto mr-4"/>
+    <nav class="hidden md:flex gap-6 text-muted font-medium items-center">
+      <a href="#inicio" class="hover:text-accent">Início</a>
+      <a href="#terapia" class="hover:text-accent">Terapia</a>
+      <a href="#sobre" class="hover:text-accent">Sobre mim</a>
+      <a href="#duvidas" class="hover:text-accent">Dúvidas</a>
+      <a href="https://api.whatsapp.com/send?phone=5551991249688&text=Oi%2C%20gostaria%20de%20saber%20mais%20sobre%20as%20sess%C3%B5es." target="_blank" class="bg-accent text-white px-3 py-2 rounded-lg shadow text-center hover:bg-card">Agendar sessão</a>
+    </nav>
+  </div>
+</header>
 
   <a href="https://api.whatsapp.com/send?phone=5551991249688&amp;text=Oi%2C%20gostaria%20de%20saber%20mais%20sobre%20as%20sess%C3%B5es." target="_blank" aria-label="Agende sua sessão pelo WhatsApp">
     <button class="fixed p-0 bottom-6 right-6 z-2000 w-16 h-16 rounded-full cursor-pointer flex items-center justify-center hover:scale-110 transition-transform animate-on-scroll fade-up" style="--stagger-delay: 500ms;">
@@ -45,10 +45,10 @@
     </button>
   </a>
 
-  <main id="inicio" class="bg-bgalt w-full py-16 md:pt-20 lg:pt-40 px-6">
+  <main id="inicio" class="bg-bgalt  w-full py-16 md:pt-20 lg:pt-40 px-6">
     <div class="max-w-[1100px] mx-auto w-full grid md:grid-cols-[1fr_460px] gap-10 items-center">
       <section class="animate-on-scroll fade-right">
-          <h1 class="max-sm:hidden text-center sm:text-left text-accent text-4xl md:text-5xl font-bold leading-tight mb-4">Psicoterapia Online</h1>          
+          <h1 class="max-sm:hidden text-center sm:text-left text-accent text-4xl md:text-5xl font-bold leading-tight mb-4">Terapia Online</h1>          
           <div class="sm:hidden mb-6">
             <div class="md:flex justify-center z-50 items-center bg-card rounded-xl p-3 shadow-lg">
               <img src="assets/vanessa_sorrindo.png" alt="Vanessa Moura sorrindo" class="rounded-lg transition-transform hover:scale-105"/>
@@ -156,7 +156,7 @@
         </div>
       </div>
   </footer>
-  <script src="script.js"></script>
+  <script src="/script.js"></script>
 
 </body>
 </html>
