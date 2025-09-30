@@ -4,12 +4,20 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Vanessa Moura — Terapia Online</title>
-  <link rel="icon" type="image/x-icon" href="/assets/favicon2.png">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CMQNWZQ449"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-CMQNWZQ449');
+  </script>
   <script>
       tailwind.config = {
         theme: {
@@ -45,7 +53,7 @@
     </button>
   </a>
 
-  <main id="inicio" class="bg-bgalt  w-full py-16 md:pt-20 lg:pt-40 px-6">
+  <main id="inicio" class="bg-bgalt h-screen w-full py-16 md:pt-20 lg:pt-40 px-6">
     <div class="max-w-[1100px] mx-auto w-full grid md:grid-cols-[1fr_460px] gap-10 items-center">
       <section class="animate-on-scroll fade-right">
           <h1 class="max-sm:hidden text-center sm:text-left text-accent text-4xl md:text-5xl font-bold leading-tight mb-4">Terapia Online</h1>          
@@ -120,25 +128,27 @@
     </div>
   </section>
 
-  <section id="duvidas" class="bg-bg text-center sm:text-left max-w-[1100px] mx-auto px-6 py-20">
-    <h2 class="text-accent text-3xl font-bold text-center mb-12 animate-on-scroll fade-down">Dúvidas frequentes</h2>
-    <div class="grid md:grid-cols-2 gap-8 stagger-children">
-      <div class="bg-white rounded-xl shadow-md p-6 transition-transform hover:scale-105 animate-on-scroll fade-up" style="--stagger-delay: 200ms;">
-        <h3 class="font-semibold text-lg mb-2">Como funciona a terapia online?</h3>
-        <p class="text-muted">As sessões são realizadas por videochamada, com a mesma qualidade e sigilo do atendimento presencial.</p>
-      </div>
-      <div class="bg-white rounded-xl shadow-md p-6 transition-transform hover:scale-105 animate-on-scroll fade-up" style="--stagger-delay: 400ms;">
-        <h3 class="font-semibold text-lg mb-2">Quanto tempo dura cada sessão?</h3>
-        <p class="text-muted">Cada sessão tem duração média de 50 minutos, realizadas semanalmente.</p>
-      </div>
-      <div class="bg-white rounded-xl shadow-md p-6 transition-transform hover:scale-105 animate-on-scroll fade-up" style="--stagger-delay: 600ms;">
-        <h3 class="font-semibold text-lg mb-2">O atendimento é sigiloso?</h3>
-        <p class="text-muted">Sim. O sigilo é um direito garantido pelo código de ética profissional da psicologia.</p>
-      </div>
-      <div class="bg-white rounded-xl shadow-md p-6 transition-transform hover:scale-105 animate-on-scroll fade-up" style="--stagger-delay: 800ms;">
-        <h3 class="font-semibold text-lg mb-2">Preciso de diagnóstico para iniciar?</h3>
-        <p class="text-muted">Não. Qualquer pessoa pode buscar a terapia para autoconhecimento e melhora no bem-estar.</p>
-      </div>
+  <section id="duvidas" class="bg-bg text-center sm:text-left w-full mx-auto px-6 py-20">
+      <div  class="max-w-[1100px] mx-auto animate-on-scroll fade-up">
+        <h2 class="text-accent text-3xl font-bold text-center mb-12 animate-on-scroll fade-down">Dúvidas frequentes</h2>
+        <div class="grid md:grid-cols-2 gap-8 stagger-children">
+          <div class="bg-white rounded-xl shadow-md p-6 transition-transform hover:scale-105 animate-on-scroll fade-up" style="--stagger-delay: 200ms;">
+            <h3 class="font-semibold text-lg mb-2">Como funciona a terapia online?</h3>
+            <p class="text-muted">As sessões são realizadas por videochamada, com a mesma qualidade e sigilo do atendimento presencial.</p>
+          </div>
+          <div class="bg-white rounded-xl shadow-md p-6 transition-transform hover:scale-105 animate-on-scroll fade-up" style="--stagger-delay: 400ms;">
+            <h3 class="font-semibold text-lg mb-2">Quanto tempo dura cada sessão?</h3>
+            <p class="text-muted">Cada sessão tem duração média de 50 minutos, realizadas semanalmente.</p>
+          </div>
+          <div class="bg-white rounded-xl shadow-md p-6 transition-transform hover:scale-105 animate-on-scroll fade-up" style="--stagger-delay: 600ms;">
+            <h3 class="font-semibold text-lg mb-2">O atendimento é sigiloso?</h3>
+            <p class="text-muted">Sim. O sigilo é um direito garantido pelo código de ética profissional da psicologia.</p>
+          </div>
+          <div class="bg-white rounded-xl shadow-md p-6 transition-transform hover:scale-105 animate-on-scroll fade-up" style="--stagger-delay: 800ms;">
+            <h3 class="font-semibold text-lg mb-2">Preciso de diagnóstico para iniciar?</h3>
+            <p class="text-muted">Não. Qualquer pessoa pode buscar a terapia para autoconhecimento e melhora no bem-estar.</p>
+          </div>
+        </div>
     </div>
   </section>
   

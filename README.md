@@ -6,7 +6,7 @@ Site profissional da psicóloga Vanessa Moura, especializada em **mulheres com a
 ## Especialidade e Abordagem
 
 **Vanessa Moura** é psicóloga especializada em **mulheres com ansiedade**, com foco em:
-- **Psicanálise clássica** (Freud e Jung)
+- **Psicanálise** 
 - **Empoderamento feminino** na prática clínica
 - **TCC**: "O empoderamento da mulher na prática clínica na psicanálise"
 
