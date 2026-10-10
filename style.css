@@ -73,3 +73,9 @@
     opacity: 1;
     transform: none; /* Reseta qualquer transformação (translate) */
   }
+
+  /* Fonte HiWeb */
+  .font-hiweb {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
