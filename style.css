@@ -33,11 +33,6 @@
     da primeira seção não comece escondido atrás do cabeçalho fixo.
     Ajuste o valor (ex: 80px) com base na altura do seu header.
   */
-  html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 90px;
-  }
-
   body {
     padding-top: 80px; /* Ajuste este valor conforme a altura do seu cabeçalho */
   }
