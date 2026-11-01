@@ -2,241 +2,574 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Vanessa Moura — Terapia Online</title>
-  <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vanessa Thaís de Moura — Psicóloga Clínica & Docente Universitária</title>
+  <meta name="description" content="Psicóloga Clínica (CRP 18/8963) e Docente Universitária. Especialista em Psicanálise, Avaliação Psicológica, Psicodiagnóstico, Psicologia Jurídica e Docência no Ensino Superior." />
+  <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+
+  <!-- Google Fonts: Cormorant Garamond (Editorial Serif) & Plus Jakarta Sans (Clean Modern Sans) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CMQNWZQ449"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-CMQNWZQ449');
   </script>
+
+  <!-- Tailwind Custom Configuration -->
   <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: { 
-              sans: ['Poppins', 'ui-sans-serif', 'system-ui'],
-              hiweb: ['"Plus Jakarta Sans"', 'sans-serif'],
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            hiweb: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            bordo: {
+              DEFAULT: '#6B1D2A',
+              hover: '#541520',
+              deep: '#3D0D15',
+              soft: '#862B3B',
+              surface: '#F6EAEB',
+              subtle: '#FAF0F1',
             },
-            colors: { bg: '#F9F5F2', bgalt: '#F1EBE6', text: '#433E3C', muted: '#847D7A', accent: '#72353A', card: '#bd6c6d', footer: '#EADFD9' },
-            borderRadius: { xl: '14px', },                  
+            ivory: {
+              DEFAULT: '#FAF7F2',
+              alt: '#F4ECE4',
+              surface: '#FDFBF9',
+              border: '#E8DDD2',
+            },
+            charcoal: {
+              DEFAULT: '#282321',
+              heading: '#1C1716',
+              muted: '#635C58',
+              light: '#8F8681',
+            }
           }
         }
       }
-  </script>  
-
+    }
+  </script>
 </head>
-<body class="bg-bgalt text-text font-sans mx-auto">  
+<body class="bg-ivory text-charcoal font-sans antialiased selection:bg-bordo selection:text-white">
 
-  <header class="lg:fixed top-0 left-0 right-0 bg-footer/90 backdrop-blur-md border-b border-accent/20 z-50 animate-on-scroll fade-down">
-    <div class="max-w-[1100px] mx-auto px-6 py-4 flex items-center justify-center md:justify-between">
-      <img src="assets/logo.png" alt="Logo Vanessa Moura Psicóloga" class="h-10 w-auto mr-4"/>      
-      <nav class="hidden md:flex gap-6 text-muted font-medium items-center">
-        <a href="#inicio" class="hover:text-accent">Início</a>
-        <a href="#terapia" class="hover:text-accent">Terapia</a>
-        <a href="#sobre" class="hover:text-accent">Sobre mim</a>
-        <a href="#agenda" class="hover:text-accent">Agenda</a>
-        <a href="#duvidas" class="hover:text-accent">Dúvidas</a>
-        <a href="#agenda" class="bg-accent text-white px-3 py-2 rounded-lg shadow text-center hover:bg-card transition">Lista de espera</a>
-      </nav>      
-    </div>
-  </header>
+  <!-- CABEÇALHO INSTITUCIONAL -->
+  <header class="fixed top-0 left-0 right-0 bg-ivory/90 backdrop-blur-md border-b border-ivory-border/70 z-50 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <!-- Identificação / Logotipo Institucional -->
+      <a href="#inicio" class="flex flex-col group">
+        <span class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-bordo-deep group-hover:text-bordo transition-colors">
+          Vanessa Thaís de Moura
+        </span>
+        <span class="text-xs uppercase tracking-wider text-charcoal-muted font-medium">
+          CRP 18/8963 • Psicóloga & Docente
+        </span>
+      </a>
 
-  <a href="https://api.whatsapp.com/send?phone=5551991249688&amp;text=Oi%2C%20gostaria%20de%20saber%20mais%20sobre%20as%20sess%C3%B5es." target="_blank" aria-label="Agende sua sessão pelo WhatsApp" class="fixed bottom-6 right-6 z-[9999]" style="z-index: 9999;">
-    <button class="p-0 w-16 h-16 rounded-full cursor-pointer flex items-center justify-center hover:scale-110 transition-transform animate-on-scroll fade-up" style="--stagger-delay: 500ms;">
-      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48"> <path fill="#fff" d="M4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5c5.1,0,9.8,2,13.4,5.6 C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19c0,0,0,0,0,0h0c-3.2,0-6.3-0.8-9.1-2.3L4.9,43.3z"></path><path fill="#fff" d="M4.9,43.8c-0.1,0-0.3-0.1-0.4-0.1c-0.1-0.1-0.2-0.3-0.1-0.5L7,33.5c-1.6-2.9-2.5-6.2-2.5-9.6 C4.5,13.2,13.3,4.5,24,4.5c5.2,0,10.1,2,13.8,5.7c3.7,3.7,5.7,8.6,5.7,13.8c0,10.7-8.7,19.5-19.5,19.5c-3.2,0-6.3-0.8-9.1-2.3 L5,43.8C5,43.8,4.9,43.8,4.9,43.8z"></path><path fill="#cfd8dc" d="M24,5c5.1,0,9.8,2,13.4,5.6C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19h0c-3.2,0-6.3-0.8-9.1-2.3 L4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5 M24,43L24,43L24,43 M24,43L24,43L24,43 M24,4L24,4C13,4,4,13,4,24 c0,3.4,0.8,6.7,2.5,9.6L3.9,43c-0.1,0.3,0,0.7,0.3,1c0.2,0.2,0.4,0.3,0.7,0.3c0.1,0,0.2,0,0.3,0l9.7-2.5c2.8,1.5,6,2.2,9.2,2.2 c11,0,20-9,20-20c0-5.3-2.1-10.4-5.8-14.1C34.4,6.1,29.4,4,24,4L24,4z"></path><path fill="#40c351" d="M35.2,12.8c-3-3-6.9-4.6-11.2-4.6C15.3,8.2,8.2,15.3,8.2,24c0,3,0.8,5.9,2.4,8.4L11,33l-1.6,5.8 l6-1.6l0.6,0.3c2.4,1.4,5.2,2.2,8,2.2h0c8.7,0,15.8-7.1,15.8-15.8C39.8,19.8,38.2,15.8,35.2,12.8z"></path><path fill="#fff" fill-rule="evenodd" d="M19.3,16c-0.4-0.8-0.7-0.8-1.1-0.8c-0.3,0-0.6,0-0.9,0 s-0.8,0.1-1.3,0.6c-0.4,0.5-1.7,1.6-1.7,4s1.7,4.6,1.9,4.9s3.3,5.3,8.1,7.2c4,1.6,4.8,1.3,5.7,1.2c0.9-0.1,2.8-1.1,3.2-2.3 c0.4-1.1,0.4-2.1,0.3-2.3c-0.1-0.2-0.4-0.3-0.9-0.6s-2.8-1.4-3.2-1.5c-0.4-0.2-0.8-0.2-1.1,0.2c-0.3,0.5-1.2,1.5-1.5,1.9 c-0.3,0.3-0.6,0.4-1,0.1c-0.5-0.2-2-0.7-3.8-2.4c-1.4-1.3-2.4-2.8-2.6-3.3c-0.3-0.5,0-0.7,0.2-1c0.2-0.2,0.5-0.6,0.7-0.8 c0.2-0.3,0.3-0.5,0.5-0.8c0.2-0.3,0.1-0.6,0-0.8C20.6,19.3,19.7,17,19.3,16z" clip-rule="evenodd"/>
-    </svg>
-    </button>
-  </a>
+      <!-- Menu Desktop -->
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-charcoal-muted">
+        <a href="#sobre" class="hover:text-bordo transition-colors">Biografia</a>
+        <a href="#atuacao" class="hover:text-bordo transition-colors">Eixos de Atuação</a>
+        <a href="#pesquisa" class="hover:text-bordo transition-colors">Estudo & Pesquisa</a>
+        <a href="#contato" class="hover:text-bordo transition-colors">Contato & Convites</a>
+      </nav>
 
-  <main id="inicio" class="bg-bgalt h-screen w-full py-16 md:pt-20 lg:pt-40 px-6">
-    <div class="max-w-[1100px] mx-auto w-full grid md:grid-cols-[1fr_460px] gap-10 items-center">
-      <section class="animate-on-scroll fade-right">
-          <h1 class="max-sm:hidden text-center sm:text-left text-accent text-4xl md:text-5xl font-bold leading-tight mb-4">Terapia Online</h1>          
-          <div class="sm:hidden mb-6">
-            <div class="md:flex justify-center z-50 items-center bg-card rounded-xl p-3 shadow-lg">
-              <img src="assets/vanessa_sorrindo.png" alt="Vanessa Moura sorrindo" class="rounded-lg transition-transform hover:scale-105"/>
-            </div>
-            <div class="text-center sm:text-left pt-3">
-              <p class="text-lg font-bold">Vanessa Moura</p>
-              <p class="text-sm text-muted">Psicóloga Clínica – CRP 18/8963</p>
-            </div>
-          </div>
-          <p class="text-center sm:text-left text-muted max-w-[54ch] mb-6">
-            Atendimento baseado em psicanálise, especializado em mulheres que enfrentam ansiedade. Humanizado e acolhedor, para você se conhecer melhor e encontrar seu equilíbrio emocional.
-          </p>
-          <div class="flex flex-wrap gap-4 mb-6 justify-center sm:justify-start">
-            <a href="#agenda" class="text-center sm:text-left bg-accent hover:bg-card text-white px-5 py-3 rounded-lg shadow transition font-semibold flex items-center justify-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
-                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
-              </svg>
-              Verificar disponibilidade
-            </a>
-            <a href="https://api.whatsapp.com/send?phone=5551991249688&amp;text=Ol%C3%A1%2C%20Vanessa!%20Gostaria%20de%20saber%20sobre%20a%20lista%20de%20espera%20para%20atendimento." target="_blank" class="text-center sm:text-left border border-accent/40 text-accent hover:bg-accent hover:text-white px-5 py-3 rounded-lg transition font-medium flex items-center justify-center gap-2">
-              Falar no WhatsApp
-            </a>
-          </div>  
-          <div class="text-center sm:text-left max-sm:hidden">
-            <p class="text-lg font-bold">Vanessa Moura</p>
-            <p class="text-sm text-muted">Psicóloga Clínica – CRP 18/8963</p>
-          </div>        
-      </section>
-
-      <aside class="hidden lg:w-full md:max-w-96 md:flex justify-center items-center bg-card rounded-xl p-3 shadow-lg animate-on-scroll fade-left">
-        <img src="assets/vanessa_sorrindo.png" alt="Vanessa Moura sorrindo" class="rounded-lg transition-transform hover:scale-105"/>
-      </aside>
-    </div>
-  </main>
-
-  <section id="terapia" class="bg-bg w-full py-16 px-6 text-center sm:text-left">
-    <div class="max-w-[1100px] mx-auto items-center px-6 grid md:grid-cols-2 gap-12">
-      <div class="text-center sm:text-left md:py-20 animate-on-scroll fade-right">
-        <img src="assets/vanessa_pose.png" alt="Vanessa pose" class="rounded-xl max-w-full transition-transform hover:scale-105"/>
-      </div>
-       <div class="animate-on-scroll fade-left">        
-        <h2 class="text-accent text-3xl font-bold mb-6">Como posso te ajudar?</h2>
-        <p class="text-muted mb-4">Especializada em mulheres com ansiedade, com abordagem baseada em psicanálise</p>
-        <ul class="list-inside text-muted space-y-2 max-w-[54ch]">
-          <li><strong>Ansiedade e crises:</strong> Gestão emocional, ataques de pânico, preocupações excessivas</li>
-          <li><strong>Depressão:</strong> Desmotivação, perda de sentido, isolamento social</li>
-          <li><strong>Empoderamento feminino:</strong> Autoestima, autoconhecimento, desenvolvimento pessoal</li>
-          <li><strong>Relacionamentos:</strong> Família, comunicação, conflitos interpessoais</li>
-        </ul>        
-      </div>
-    </div>
-  </section>
-
-  <section id="sobre" class="text-center sm:text-left py-16 bg-bgalt">
-    <div class="max-w-[1100px] mx-auto px-6 grid md:grid-cols-3 gap-12 items-center animate-on-scroll fade-up">
-      <div class="md:col-span-2">
-        <img src="assets/vanessa_e_vitor.jpg" alt="Vanessa Moura e Vitor Hugo" class="max-w-full sm:hidden justify-center items-center rounded-xl p-3 transition-transform hover:scale-105"/>
-        <h2 class="text-accent text-3xl font-bold mb-6">Sobre mim</h2>
-        <div class="text-muted mb-4 space-y-4 md:max-w-33vw">
-          <p>Meu nome é Vanessa Moura e sou psicóloga clínica – mas isso você talvez já saiba. O que talvez não saiba é que sou mãe do Victor Hugo, apaixonada por gatos e completamente dedicada à minha profissão. Desde pequena, sonhava em ser psicóloga, e foi uma longa jornada até chegar aqui.</p>
-          <p><strong>Minha especialidade:</strong> Mulheres com Ansiedade. Me identifico muito com a psicanálise, e gosto muito de estudar a psicanálise clássica. Meu TCC foi sobre "O empoderamento da mulher na prática clínica na psicanálise".</p>
-          <p><strong>Minha jornada pessoal:</strong> Conheço a ansiedade na pele. Já tive depressão que não me deixava sair de casa. Por isso entendo profundamente o que você está passando. Amo ser psicóloga e poder ajudar outras pessoas a superarem seus desafios.</p>
-          <img src="assets/vanessa_estudando.png" alt="Vanessa Moura estudando" class="max-w-full sm:hidden justify-center items-center rounded-xl p-3 "/>
-          <p><strong>Minha trajetória:</strong> Nasci em São Paulo, me criei em Goiás, e hoje moro em Mato Grosso. Me formei em Psicologia na UNIFASIPE, em Sinop-MT, e me especializei em Psicanálise, Avaliação Psicológica e Psicodiagnóstico. Atualmente, atendo adultos em consultório online, e sou docente na Faculdade Anhanguera.</p>
-          <p>Essa é parte da minha história – sou humana como você, com minhas próprias lutas e conquistas. Para consultar vagas ou entrar na lista de espera, veja a agenda abaixo ou me chame no WhatsApp. Será um prazer te atender! 💙</p>
-        </div>
-      </div>
-      <div class="grid gap-6 self-start">        
-        <div class="md:flex justify-center items-center bg-card rounded-xl p-3 shadow-lg max-sm:hidden">
-          <img src="assets/vanessa_e_vitor.jpg" alt="Vanessa Moura e Vitor Hugo" class="rounded-xl max-w-full transition-transform hover:scale-105"/>
-        </div>
-        <div class="md:flex justify-center items-center bg-card rounded-xl p-3 shadow-lg max-sm:hidden">
-          <img src="assets/vanessa_estudando.png" alt="Vanessa Moura estudando" class="rounded-xl max-w-full transition-transform hover:scale-105"/>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Seção de Status da Agenda / Lista de Espera (Calendly temporariamente suspenso) -->
-  <section id="agenda" class="bg-bg text-center py-20 px-6">
-    <div class="max-w-[850px] mx-auto animate-on-scroll fade-up">
-      <!-- Status Badge -->
-      <div class="inline-flex items-center gap-2 bg-accent/10 border border-accent/20 text-accent text-xs md:text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
-        <span class="w-2.5 h-2.5 rounded-full bg-accent animate-pulse"></span>
-        <span>Status de Atendimentos • Agenda Completa</span>
-      </div>
-
-      <h2 class="text-accent text-3xl md:text-4xl font-bold mb-4">Agenda temporariamente cheia</h2>
-      <p class="text-muted text-base md:text-lg max-w-[620px] mx-auto mb-10 leading-relaxed">
-        Para manter a dedicação, acolhimento e qualidade no atendimento de cada paciente, as vagas para novos agendamentos estão temporariamente encerradas no momento.
-      </p>
-
-      <!-- Card da Lista de Espera -->
-      <div class="bg-white rounded-2xl shadow-lg border border-accent/15 p-8 md:p-12 text-center">
-        <div class="w-16 h-16 mx-auto mb-5 rounded-full bg-accent/10 flex items-center justify-center text-accent">
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
-            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
-          </svg>
-        </div>
-
-        <h3 class="text-xl md:text-2xl font-bold text-text mb-3">Deseja entrar na lista de espera?</h3>
-        <p class="text-muted text-sm md:text-base max-w-[540px] mx-auto mb-8 leading-relaxed">
-          Assim que surgirem novas vagas ou horários disponíveis, você será avisada com prioridade. Envie uma mensagem no WhatsApp informando seu nome e o período de sua preferência (manhã, tarde ou noite).
-        </p>
-
-        <a href="https://api.whatsapp.com/send?phone=5551991249688&amp;text=Ol%C3%A1%2C%20Vanessa!%20Gostaria%20de%20entrar%20na%20lista%20de%20espera%20para%20atendimento%20psicol%C3%B3gico." 
+      <!-- Botão Lattes no Header -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="http://lattes.cnpq.br/8473884960609866" 
            target="_blank" 
-           class="inline-flex items-center justify-center gap-3 bg-accent hover:bg-card text-white font-semibold px-8 py-4 rounded-xl shadow-md hover:shadow-lg transition-all hover:scale-[1.02] text-base">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592z"/>
+           rel="noopener noreferrer" 
+           class="inline-flex items-center gap-2 border border-bordo/30 text-bordo hover:bg-bordo hover:text-white px-4 py-2 rounded-lg text-xs font-semibold tracking-wide transition-all shadow-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 14l9-5-9-5-9 5 9 5z"/>
+            <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
           </svg>
-          Entrar na Lista de Espera pelo WhatsApp
+          Currículo Lattes
         </a>
       </div>
 
-      <!-- 
-        NOTA: Para reativar o Calendly quando reabrir vagas:
-        Basta reinserir o widget:
-        <div class="calendly-inline-widget w-full" data-url="https://calendly.com/SEU-LINK"></div>
-      -->
+      <!-- Menu Mobile (Toggle simples) -->
+      <div class="lg:hidden flex items-center gap-2">
+        <a href="#contato" class="text-xs font-semibold bg-bordo text-white px-3 py-1.5 rounded-md">
+          Contato
+        </a>
+      </div>
     </div>
-  </section>
+  </header>
 
-  <section id="duvidas" class="bg-bgalt text-center sm:text-left w-full mx-auto px-6 py-20">
-      <div  class="max-w-[1100px] mx-auto animate-on-scroll fade-up">
-        <h2 class="text-accent text-3xl font-bold text-center mb-12 animate-on-scroll fade-down">Dúvidas frequentes</h2>
-        <div class="grid md:grid-cols-2 gap-8 stagger-children">
-          <div class="bg-white rounded-xl shadow-md p-6 transition-transform hover:scale-105 animate-on-scroll fade-up" style="--stagger-delay: 200ms;">
-            <h3 class="font-semibold text-lg mb-2">Como funciona a terapia online?</h3>
-            <p class="text-muted">As sessões são realizadas por videochamada, com a mesma qualidade e sigilo do atendimento presencial.</p>
-          </div>
-          <div class="bg-white rounded-xl shadow-md p-6 transition-transform hover:scale-105 animate-on-scroll fade-up" style="--stagger-delay: 400ms;">
-            <h3 class="font-semibold text-lg mb-2">Quanto tempo dura cada sessão?</h3>
-            <p class="text-muted">Cada sessão tem duração média de 50 minutos, realizadas semanalmente.</p>
-          </div>
-          <div class="bg-white rounded-xl shadow-md p-6 transition-transform hover:scale-105 animate-on-scroll fade-up" style="--stagger-delay: 600ms;">
-            <h3 class="font-semibold text-lg mb-2">O atendimento é sigiloso?</h3>
-            <p class="text-muted">Sim. O sigilo é um direito garantido pelo código de ética profissional da psicologia.</p>
-          </div>
-          <div class="bg-white rounded-xl shadow-md p-6 transition-transform hover:scale-105 animate-on-scroll fade-up" style="--stagger-delay: 800ms;">
-            <h3 class="font-semibold text-lg mb-2">Preciso de diagnóstico para iniciar?</h3>
-            <p class="text-muted">Não. Qualquer pessoa pode buscar a terapia para autoconhecimento e melhora no bem-estar.</p>
-          </div>
+  <!-- CAPA / HERO INSTITUCIONAL -->
+  <section id="inicio" class="pt-32 pb-20 md:pt-40 md:pb-28 px-6 bg-gradient-to-b from-ivory to-ivory-alt/50 border-b border-ivory-border/50">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-12 gap-12 lg:gap-16 items-center">
+      
+      <!-- Coluna de Texto & Autoridade -->
+      <div class="md:col-span-7 flex flex-col justify-center animate-on-scroll fade-right">
+        
+        <!-- Badge de Registro e Título -->
+        <div class="inline-flex items-center gap-2 self-start bg-bordo-surface border border-bordo/15 text-bordo px-3.5 py-1 rounded-full text-xs font-semibold tracking-wide uppercase mb-6">
+          <span class="w-1.5 h-1.5 rounded-full bg-bordo"></span>
+          CRP 18/8963 • Sinop / MT
         </div>
-    </div>
-  </section>
-  
-  <footer class="bg-footer border-t border-accent/20 pt-6">
-      <div class="mx-auto px-6 text-center text-text flex-wrap gap-4 justify-center items-center pb-6">  
-        © <strong>Vanessa Moura</strong> — Psicóloga Clínica • CRP 18/8963  
-        <div class="mt-2 gap-4 text-sm flex-wrap flex justify-center items-center">
-          <a href="tel:+5551991249688" class="hover:text-accent">+55 (51) 99124-9688</a>
-          <a href="mailto:psi.vanessamoura0@gmail.com" class="hover:text-accent">psi.vanessamoura0@gmail.com</a>          
-          <a href="https://instagram.com/psicologaemsinop/" target="_blank" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:5px;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram hover:text-accent" viewBox="0 0 16 16">
-              <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-charcoal-heading leading-[1.1] mb-3">
+          Vanessa Thaís de Moura
+        </h1>
+        
+        <p class="text-lg sm:text-xl font-medium text-bordo tracking-tight mb-8">
+          Psicóloga Clínica & Docente Universitária
+        </p>
+
+        <!-- Frase de Apresentação em Destaque Editorial -->
+        <div class="relative pl-6 py-2 border-l-2 border-bordo/40 mb-10">
+          <p class="font-serif italic text-xl sm:text-2xl text-charcoal leading-relaxed">
+            "Articulando a prática clínica em psicanálise, o rigor do psicodiagnóstico e a formação acadêmica no ensino superior."
+          </p>
+        </div>
+
+        <!-- Botões de Ação Institucional -->
+        <div class="flex flex-wrap items-center gap-4">
+          <a href="http://lattes.cnpq.br/8473884960609866" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="inline-flex items-center gap-2.5 bg-bordo hover:bg-bordo-hover text-white px-6 py-3.5 rounded-lg font-medium text-sm transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 14l9-5-9-5-9 5 9 5z"/>
+              <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
+            </svg>
+            <span>Acessar Currículo Lattes</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 opacity-70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+              <polyline points="15 3 21 3 21 9"/>
+              <line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+          </a>
+
+          <a href="#contato" 
+             class="inline-flex items-center gap-2 border border-charcoal/20 hover:border-bordo text-charcoal hover:text-bordo bg-white/70 hover:bg-white px-6 py-3.5 rounded-lg font-medium text-sm transition-all shadow-sm">
+            <span>Contato Institucional</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
             </svg>
           </a>
         </div>
+
+        <!-- Selo de Vinculação Universitária -->
+        <div class="mt-10 pt-6 border-t border-ivory-border flex items-center gap-3 text-xs text-charcoal-muted">
+          <span class="inline-block w-2 h-2 rounded-full bg-emerald-700"></span>
+          <span>Docente na <strong>Faculdade Anhanguera de Sinop</strong> • Graduanda em Criminologia</span>
+        </div>
+
       </div>
 
-      <!-- Base do site / Créditos HiWeb -->
-      <div class="py-3.5 z-10 px-6 border-t border-accent/20 bg-footer/90 backdrop-blur-md">
-        <div class="max-w-[1100px] mx-auto flex items-center justify-center text-xs">
-          <a href="https://hiweb.com.br" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2  transition-colors group">
-            <span style="color: black;" class="text-slate-400">Feito por</span>
-            <div class="inline-flex items-center gap-1.5 font-bold text-sm tracking-wide group-hover:brightness-110 transition-all font-hiweb" style="font-family: 'Plus Jakarta Sans', sans-serif;">
-              <img src="assets/hiweb-logo.png" alt="Logo HiWeb" class="h-4 w-4 object-contain inline-block transform group-hover:scale-110 transition-transform">
-              <span><span style="color: black;">Hi</span><span style="color: #00D3FC;">Web</span></span>
+      <!-- Coluna da Fotografia Oficial (Única foto em destaque) -->
+      <div class="md:col-span-5 flex justify-center md:justify-end animate-on-scroll fade-left">
+        <div class="relative w-full max-w-[380px]">
+          <!-- Moldura elegante e sutil -->
+          <div class="absolute -inset-2 rounded-2xl bg-gradient-to-tr from-bordo/15 via-transparent to-ivory-border/40 -z-10 blur-sm"></div>
+          
+          <div class="relative overflow-hidden rounded-2xl border-2 border-white shadow-xl bg-ivory-alt">
+            <img 
+              src="assets/vanessa_perfil.jpg" 
+              alt="Foto Oficial de Vanessa Thaís de Moura" 
+              class="w-full h-auto object-cover aspect-[4/5] filter contrast-[1.02]"
+              loading="eager"
+            />
+            <!-- Legenda da Imagem discreta -->
+            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-charcoal-heading/90 via-charcoal-heading/50 to-transparent p-4 pt-10 text-white">
+              <p class="text-sm font-semibold tracking-wide">Vanessa Thaís de Moura</p>
+              <p class="text-xs text-ivory/80">Psicóloga Clínica & Docente • CRP 18/8963</p>
             </div>
-          </a>
+          </div>
         </div>
       </div>
-  </footer>
-  <script src="script.js"></script>
 
+    </div>
+  </section>
+
+  <!-- SOBRE MIM / BIOGRAFIA EXECUTIVA -->
+  <section id="sobre" class="py-20 md:py-28 px-6 bg-ivory">
+    <div class="max-w-5xl mx-auto">
+      
+      <!-- Cabeçalho da Seção -->
+      <div class="text-center md:text-left max-w-3xl mb-12 animate-on-scroll fade-up">
+        <span class="text-xs uppercase tracking-widest text-bordo font-bold">Trajetória Profissional</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-charcoal-heading mt-2 mb-4">
+          Biografia Executiva
+        </h2>
+        <div class="w-16 h-0.5 bg-bordo md:mx-0 mx-auto"></div>
+      </div>
+
+      <!-- Bloco Principal do Texto -->
+      <div class="bg-ivory-surface border border-ivory-border/80 rounded-2xl p-8 sm:p-10 lg:p-12 shadow-sm mb-12 animate-on-scroll fade-up">
+        <p class="text-base sm:text-lg text-charcoal leading-relaxed font-normal">
+          Psicóloga clínica com especializações em <strong>Psicanálise</strong>, <strong>Avaliação Psicológica e Psicodiagnóstico</strong>, <strong>Psicologia Jurídica</strong>, <strong>Psicopatologia</strong> e <strong>Educação Superior</strong>, com graduação complementar em andamento em <strong>Criminologia</strong> pela Anhanguera. Atua na intersecção entre o atendimento clínico de orientação psicanalítica, a elaboração de pareceres técnicos e a docência no ensino superior na Faculdade Anhanguera de Sinop.
+        </p>
+      </div>
+
+      <!-- Credenciais Acadêmicas & Especializações (Grid sóbrio) -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 animate-on-scroll fade-up">
+        
+        <div class="bg-white/80 border border-ivory-border/90 rounded-xl p-6 transition-all hover:border-bordo/40 hover:shadow-md">
+          <div class="w-8 h-8 rounded-lg bg-bordo-surface text-bordo flex items-center justify-center font-serif font-bold text-sm mb-4">
+            01
+          </div>
+          <h3 class="font-semibold text-charcoal-heading text-base mb-2">Clínica & Psicanálise</h3>
+          <p class="text-xs text-charcoal-muted leading-relaxed">
+            Especialização voltada à escuta da subjetividade, manejo da transferência e sofrimento psíquico sob a fundamentação teórica psicanalítica.
+          </p>
+        </div>
+
+        <div class="bg-white/80 border border-ivory-border/90 rounded-xl p-6 transition-all hover:border-bordo/40 hover:shadow-md">
+          <div class="w-8 h-8 rounded-lg bg-bordo-surface text-bordo flex items-center justify-center font-serif font-bold text-sm mb-4">
+            02
+          </div>
+          <h3 class="font-semibold text-charcoal-heading text-base mb-2">Avaliação Psicológica & Psicodiagnóstico</h3>
+          <p class="text-xs text-charcoal-muted leading-relaxed">
+            Especialização em testes psicológicos, processos investigativos da personalidade, cognição e redação de documentos científicos.
+          </p>
+        </div>
+
+        <div class="bg-white/80 border border-ivory-border/90 rounded-xl p-6 transition-all hover:border-bordo/40 hover:shadow-md">
+          <div class="w-8 h-8 rounded-lg bg-bordo-surface text-bordo flex items-center justify-center font-serif font-bold text-sm mb-4">
+            03
+          </div>
+          <h3 class="font-semibold text-charcoal-heading text-base mb-2">Psicologia Jurídica & Psicopatologia</h3>
+          <p class="text-xs text-charcoal-muted leading-relaxed">
+            Formação especializada na compreensão de quadros nosológicos e atuação técnica pericial na interface com o Direito e a Criminologia.
+          </p>
+        </div>
+
+        <div class="bg-white/80 border border-ivory-border/90 rounded-xl p-6 transition-all hover:border-bordo/40 hover:shadow-md">
+          <div class="w-8 h-8 rounded-lg bg-bordo-surface text-bordo flex items-center justify-center font-serif font-bold text-sm mb-4">
+            04
+          </div>
+          <h3 class="font-semibold text-charcoal-heading text-base mb-2">Docência no Ensino Superior</h3>
+          <p class="text-xs text-charcoal-muted leading-relaxed">
+            Especialização em metodologias de ensino universitário, projeto pedagógico e formação crítica de novos profissionais.
+          </p>
+        </div>
+
+        <div class="bg-white/80 border border-ivory-border/90 rounded-xl p-6 transition-all hover:border-bordo/40 hover:shadow-md">
+          <div class="w-8 h-8 rounded-lg bg-bordo-surface text-bordo flex items-center justify-center font-serif font-bold text-sm mb-4">
+            05
+          </div>
+          <h3 class="font-semibold text-charcoal-heading text-base mb-2">Criminologia</h3>
+          <p class="text-xs text-charcoal-muted leading-relaxed">
+            Graduação complementar em andamento (Faculdade Anhanguera), articulando políticas penais, ciências forenses e conduta desviante.
+          </p>
+        </div>
+
+        <div class="bg-white/80 border border-ivory-border/90 rounded-xl p-6 transition-all hover:border-bordo/40 hover:shadow-md">
+          <div class="w-8 h-8 rounded-lg bg-bordo-surface text-bordo flex items-center justify-center font-serif font-bold text-sm mb-4">
+            06
+          </div>
+          <h3 class="font-semibold text-charcoal-heading text-base mb-2">Docência na Anhanguera Sinop</h3>
+          <p class="text-xs text-charcoal-muted leading-relaxed">
+            Professora do corpo docente na graduação em Psicologia, lecionando disciplinas teóricas e práticas formativas.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EIXOS DE ATUAÇÃO (3 BLOCOS INFORMATIVOS E SÓBRIOS) -->
+  <section id="atuacao" class="py-20 md:py-28 px-6 bg-ivory-alt/40 border-y border-ivory-border/60">
+    <div class="max-w-6xl mx-auto">
+      
+      <!-- Cabeçalho -->
+      <div class="text-center max-w-2xl mx-auto mb-16 animate-on-scroll fade-down">
+        <span class="text-xs uppercase tracking-widest text-bordo font-bold">Pilares Profissionais</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-charcoal-heading mt-2 mb-4">
+          Eixos de Atuação
+        </h2>
+        <p class="text-sm text-charcoal-muted">
+          Articulação contínua entre a docência acadêmica, a escuta clínica e a precisão técnica no diagnóstico.
+        </p>
+        <div class="w-16 h-0.5 bg-bordo mx-auto mt-4"></div>
+      </div>
+
+      <!-- 3 Blocos Sóbrios -->
+      <div class="grid md:grid-cols-3 gap-8">
+        
+        <!-- Bloco 1: Docência & Ensino Superior -->
+        <article class="bg-white border border-ivory-border rounded-2xl p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow animate-on-scroll fade-up">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-bordo-surface text-bordo flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+            </div>
+            <span class="text-xs font-semibold text-bordo uppercase tracking-wider">Ensino & Formação</span>
+            <h3 class="font-serif text-2xl font-bold text-charcoal-heading mt-1 mb-4">
+              Docência & Ensino Superior
+            </h3>
+            <p class="text-sm text-charcoal-muted leading-relaxed">
+              Ministração de disciplinas de matriz analítica, processos psicológicos básicos, psicopatologia e avaliação psicológica na graduação.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-ivory-border/60 text-xs text-charcoal-light flex items-center gap-2">
+            <span>Faculdade Anhanguera de Sinop</span>
+          </div>
+        </article>
+
+        <!-- Bloco 2: Clínica & Psicanálise -->
+        <article class="bg-white border border-ivory-border rounded-2xl p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow animate-on-scroll fade-up" style="--stagger-delay: 150ms;">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-bordo-surface text-bordo flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+              </svg>
+            </div>
+            <span class="text-xs font-semibold text-bordo uppercase tracking-wider">Prática Clínica</span>
+            <h3 class="font-serif text-2xl font-bold text-charcoal-heading mt-1 mb-4">
+              Clínica & Psicanálise
+            </h3>
+            <p class="text-sm text-charcoal-muted leading-relaxed">
+              Atendimento e investigação fundamentados na teoria psicanalítica voltados à subjetividade e ao sofrimento psíquico adulto.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-ivory-border/60 text-xs text-charcoal-light flex items-center gap-2">
+            <span>Orientação Psicanalítica • Adultos</span>
+          </div>
+        </article>
+
+        <!-- Bloco 3: Avaliação Psicológica & Psicodiagnóstico -->
+        <article class="bg-white border border-ivory-border rounded-2xl p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow animate-on-scroll fade-up" style="--stagger-delay: 300ms;">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-bordo-surface text-bordo flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <span class="text-xs font-semibold text-bordo uppercase tracking-wider">Perícia & Diagnóstico</span>
+            <h3 class="font-serif text-2xl font-bold text-charcoal-heading mt-1 mb-4">
+              Avaliação & Psicodiagnóstico
+            </h3>
+            <p class="text-sm text-charcoal-muted leading-relaxed">
+              Processos avaliativos, elaboração de documentos psicológicos e interface com psicologia jurídica e criminologia.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-ivory-border/60 text-xs text-charcoal-light flex items-center gap-2">
+            <span>Laudos, Pareceres Técnicos & Perícia</span>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ÁREAS DE ESTUDO & PESQUISA -->
+  <section id="pesquisa" class="py-20 md:py-28 px-6 bg-ivory">
+    <div class="max-w-5xl mx-auto">
+      
+      <!-- Cabeçalho -->
+      <div class="text-center md:text-left max-w-2xl mb-14 animate-on-scroll fade-up">
+        <span class="text-xs uppercase tracking-widest text-bordo font-bold">Investigação Acadêmica</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-charcoal-heading mt-2 mb-4">
+          Áreas de Estudo & Pesquisa
+        </h2>
+        <div class="w-16 h-0.5 bg-bordo md:mx-0 mx-auto"></div>
+      </div>
+
+      <!-- Lista Editorial de Pesquisa -->
+      <div class="space-y-6">
+        
+        <!-- Linha 1 -->
+        <div class="bg-ivory-surface border border-ivory-border/80 rounded-2xl p-8 hover:border-bordo/40 transition-all shadow-sm animate-on-scroll fade-up">
+          <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+            <div class="space-y-2">
+              <span class="inline-block text-xs font-bold text-bordo tracking-wider uppercase">Linha 01</span>
+              <h3 class="font-serif text-2xl font-bold text-charcoal-heading">
+                Psicopatologia & Saúde Mental
+              </h3>
+              <p class="text-sm text-charcoal-muted leading-relaxed max-w-3xl">
+                Investigação conceitual e diagnóstica sobre o sofrimento psíquico contemporâneo, a emergência de sintomas na cultura atual e o cuidado interdisciplinar em saúde mental.
+              </p>
+            </div>
+            <span class="self-start sm:self-center shrink-0 px-3 py-1 rounded-full text-xs font-medium bg-ivory border border-ivory-border text-charcoal-muted">
+              Clínica & Sociedade
+            </span>
+          </div>
+        </div>
+
+        <!-- Linha 2 -->
+        <div class="bg-ivory-surface border border-ivory-border/80 rounded-2xl p-8 hover:border-bordo/40 transition-all shadow-sm animate-on-scroll fade-up">
+          <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+            <div class="space-y-2">
+              <span class="inline-block text-xs font-bold text-bordo tracking-wider uppercase">Linha 02</span>
+              <h3 class="font-serif text-2xl font-bold text-charcoal-heading">
+                Psicanálise & Prática Clínica
+              </h3>
+              <p class="text-sm text-charcoal-muted leading-relaxed max-w-3xl">
+                Investigação orientada à subjetividade feminina, corpo e sintoma, além do manejo técnico da transferência e das especificidades da escuta analítica no atendimento a adultos.
+              </p>
+            </div>
+            <span class="self-start sm:self-center shrink-0 px-3 py-1 rounded-full text-xs font-medium bg-ivory border border-ivory-border text-charcoal-muted">
+              Teoria & Técnica Analítica
+            </span>
+          </div>
+        </div>
+
+        <!-- Linha 3 -->
+        <div class="bg-ivory-surface border border-ivory-border/80 rounded-2xl p-8 hover:border-bordo/40 transition-all shadow-sm animate-on-scroll fade-up">
+          <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+            <div class="space-y-2">
+              <span class="inline-block text-xs font-bold text-bordo tracking-wider uppercase">Linha 03</span>
+              <h3 class="font-serif text-2xl font-bold text-charcoal-heading">
+                Avaliação Psicológica, Criminologia e Políticas Penais
+              </h3>
+              <p class="text-sm text-charcoal-muted leading-relaxed max-w-3xl">
+                Articulação técnico-científica entre psicodiagnóstico, perícia forense, criminologia clínica e os impactos das medidas punitivas e penais no sistema judiciário brasileiro.
+              </p>
+            </div>
+            <span class="self-start sm:self-center shrink-0 px-3 py-1 rounded-full text-xs font-medium bg-ivory border border-ivory-border text-charcoal-muted">
+              Forense & Criminologia
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RODAPÉ & CONTATO PROFISSIONAL / ACADÊMICO -->
+  <section id="contato" class="py-20 md:py-24 px-6 bg-ivory-alt/70 border-t border-ivory-border">
+    <div class="max-w-5xl mx-auto">
+      
+      <!-- Box de Contato Institucional -->
+      <div class="bg-white border border-ivory-border rounded-3xl p-8 sm:p-12 lg:p-14 shadow-sm animate-on-scroll fade-up">
+        
+        <div class="max-w-2xl">
+          <span class="text-xs uppercase tracking-widest text-bordo font-bold">Relacionamento Profissional</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-charcoal-heading mt-2 mb-4">
+            Contato & Convites Institucionais
+          </h2>
+          <p class="text-sm sm:text-base text-charcoal-muted leading-relaxed mb-8">
+            Canal aberto para convites de <strong>bancas acadêmicas</strong>, <strong>palestras e aulas magnas</strong>, <strong>consultorias técnicas</strong> e contato institucional do consultório clínico.
+          </p>
+        </div>
+
+        <!-- Grade de Contatos e Links -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-4 border-t border-ivory-border">
+          
+          <!-- E-mail -->
+          <div class="space-y-1.5">
+            <span class="text-xs uppercase tracking-wider text-charcoal-light font-medium">E-mail Profissional</span>
+            <div>
+              <a href="mailto:psi.vanessamoura0@gmail.com" class="text-sm font-semibold text-charcoal hover:text-bordo transition-colors break-all">
+                psi.vanessamoura0@gmail.com
+              </a>
+            </div>
+            <p class="text-[11px] text-charcoal-light">Bancas, palestras e consultorias</p>
+          </div>
+
+          <!-- Telefone / WhatsApp -->
+          <div class="space-y-1.5">
+            <span class="text-xs uppercase tracking-wider text-charcoal-light font-medium">Telefone / WhatsApp</span>
+            <div>
+              <a href="https://api.whatsapp.com/send?phone=5551991249688&amp;text=Ol%C3%A1%2C%20Prof.%C2%AA%20Vanessa%20Moura.%20Gostaria%20de%20tratar%20sobre%20um%20contato%20profissional%2Facad%C3%AAmico." 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="text-sm font-semibold text-charcoal hover:text-bordo transition-colors">
+                +55 (51) 99124-9688
+              </a>
+            </div>
+            <p class="text-[11px] text-charcoal-light">Atendimento e consultório</p>
+          </div>
+
+          <!-- Currículo Lattes -->
+          <div class="space-y-1.5 sm:col-span-2 lg:col-span-1">
+            <span class="text-xs uppercase tracking-wider text-charcoal-light font-medium">Plataforma CNPq</span>
+            <div>
+              <a href="http://lattes.cnpq.br/8473884960609866" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="inline-flex items-center gap-1.5 text-sm font-semibold text-bordo hover:text-bordo-hover transition-colors">
+                <span>Currículo Lattes</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+              </a>
+            </div>
+            <p class="text-[11px] text-charcoal-light">Trajetória e publicações</p>
+          </div>
+
+        </div>
+
+        <!-- Botões de Ação Rápida no Rodapé -->
+        <div class="mt-8 pt-6 border-t border-ivory-border flex flex-wrap gap-4 items-center">
+          <a href="http://lattes.cnpq.br/8473884960609866" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="inline-flex items-center gap-2 bg-bordo hover:bg-bordo-hover text-white px-5 py-2.5 rounded-lg text-xs font-semibold tracking-wide transition-all shadow-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 14l9-5-9-5-9 5 9 5z"/>
+              <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
+            </svg>
+            Ver Lattes Completo
+          </a>
+
+          <a href="mailto:psi.vanessamoura0@gmail.com" 
+             class="inline-flex items-center gap-2 border border-charcoal/20 hover:border-bordo text-charcoal hover:text-bordo px-5 py-2.5 rounded-lg text-xs font-semibold tracking-wide transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            Enviar Mensagem por E-mail
+          </a>
+
+          <a href="https://instagram.com/psicologaemsinop/" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="inline-flex items-center gap-1.5 text-xs text-charcoal-muted hover:text-bordo transition-colors ml-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+            </svg>
+            <span>@psicologaemsinop</span>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RODAPÉ FINAL / CRÉDITOS HIWEB -->
+  <footer class="bg-ivory border-t border-ivory-border py-8 px-6 text-center text-xs text-charcoal-muted">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        <p>© <strong>Vanessa Thaís de Moura</strong> — Psicóloga Clínica & Docente • CRP 18/8963</p>
+      </div>
+
+      <!-- Créditos HiWeb -->
+      <div class="flex items-center justify-center">
+        <a href="https://hiweb.com.br" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 transition-colors group">
+          <span class="text-charcoal-light">Desenvolvido por</span>
+          <div class="inline-flex items-center gap-1 font-bold text-xs tracking-wide group-hover:brightness-110 transition-all font-hiweb">
+            <img src="assets/hiweb-logo.png" alt="Logo HiWeb" class="h-3.5 w-3.5 object-contain inline-block transform group-hover:scale-105 transition-transform">
+            <span><span class="text-charcoal-heading">Hi</span><span style="color: #00D3FC;">Web</span></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

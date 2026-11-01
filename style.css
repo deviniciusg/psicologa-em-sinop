@@ -1,86 +1,52 @@
-  /*
-    Animação para o cabeçalho aparecer suavemente.
-    Ela será aplicada diretamente no seletor do header.
-  */
-  @keyframes fade-down-animation {
-    /* Estado inicial: transparente e um pouco acima */
-    from {
-      opacity: 0;
-      transform: translateY(-100%); /* Começa totalmente fora da tela, acima */
-    }
-    /* Estado final: visível e na posição correta */
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+/* Configuração de Rolagem Suave */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
 
-  /*
-    Aplicação da animação no cabeçalho.
-  */
-  #main-header {
-    /*
-      animation: [nome-da-animação] [duração] [timing-function] [delay] [fill-mode];
-      - ease-out: Começa rápido e desacelera no final.
-      - forwards: Mantém o estado final da animação (opacity: 1, transform: translateY(0)).
-    */
-    animation: fade-down-animation 0.8s ease-out forwards;
-  }
-
-  /*
-    (Opcional, mas recomendado)
-    Adiciona um padding no topo do corpo da página para que o conteúdo
-    da primeira seção não comece escondido atrás do cabeçalho fixo.
-    Ajuste o valor (ex: 80px) com base na altura do seu header.
-  */
-  html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 90px;
-  }
-
-  body {
-    padding-top: 80px; /* Ajuste este valor conforme a altura do seu cabeçalho */
-  }
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 /* 1. Classe base para todos os elementos animados */
-  .animate-on-scroll {
-    opacity: 0;
-    /* Define a transição suave para opacidade e posição */
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-  }
+.animate-on-scroll {
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
 
-  /* 2. Classes de direção (definem o estado inicial, antes de aparecer) */
-  .fade-up {
-    transform: translateY(30px); /* Começa 30px abaixo */
-  }
+/* 2. Classes de direção */
+.fade-up {
+  transform: translateY(24px);
+}
 
-  .fade-down {
-    transform: translateY(-30px); /* Começa 30px acima */
-  }
+.fade-down {
+  transform: translateY(-24px);
+}
 
-  .fade-left {
-    transform: translateX(30px); /* Começa 30px à direita */
-  }
+.fade-left {
+  transform: translateX(24px);
+}
 
-  .fade-right {
-    transform: translateX(-30px); /* Começa 30px à esquerda */
-  }
-  
-  /* Adicionando um efeito de cascata (stagger) para as dúvidas */
-  .stagger-children > * {
-    transition-delay: var(--stagger-delay, 0ms);    
+.fade-right {
+  transform: translateX(-24px);
+}
 
-  }
+/* Adicionando suporte a efeito de cascata (stagger) */
+.stagger-children > * {
+  transition-delay: var(--stagger-delay, 0ms);
+}
 
+/* 3. Classe final ativada pelo IntersectionObserver */
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: none;
+}
 
-  /* 3. Classe final (adicionada via JS quando o elemento está visível) */
-  .animate-on-scroll.is-visible {
-    opacity: 1;
-    transform: none; /* Reseta qualquer transformação (translate) */
-  }
-
-  /* Fonte HiWeb */
-  .font-hiweb {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-  }
-
+/* Tipografia HiWeb */
+.font-hiweb {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
